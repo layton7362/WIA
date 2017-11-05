@@ -1,0 +1,63 @@
+%% Preambel
+\documentclass[conference,compsoc,final,a4paper]{IEEEtran}
+\usepackage[utf8]{inputenx}
+
+%% Bitte legen Sie hier den Titel und den Autor der Arbeit fest
+\newcommand{\autoren}[0]{Salame, Ahmed}
+\newcommand{\dokumententitel}[0]{Gutes API Design}
+
+\input{preambel} % Weitere Einstellungen aus einer anderen Datei lesen
+
+% Eigentliches Dokument beginnt hier
+% ----------------------------------------------------------------------------------------------------------
+
+% Kurze Zusammenfassung des Dokuments
+\begin{abstract}
+
+Dieses Paper stellt Kriterien für ein gutes \ac{API} Design. Es zeigt ebenso was schlechtes Design ausmacht anhand von paar Beispielen. Es werden verschiedene Ansätze aufgezeigt, mit dessen Hilfe die usability einer \ac{API} verbessern kann.
+
+\end{abstract}
+
+\tableofcontents
+
+% Abschnitte mit \section und Unterabschnitte mit \subsection
+\section{Einleitung}
+\subsection{Definition einer \ac{API}}
+Gutes \ac{API} Design ist wichtig.
+
+\section{Probleme von schlechten \ac{API}}
+
+Hier soll es einige Beispiele geben, die erklären sollen welche Probleme es gibt. Dabei soll Bezug genommen werden auf bekannte Probleme wie unglücklich gewählte Methodennamen etc. Danach wird auf potenzielle Lösungen Eingegangen (siehe Abschnitt \ref{db-loesung}).
+
+\section{Design Beispiele}\label{db-loesung}
+
+Hier soll es einen Auszug geben, welche möglichen Lösungen zu ausgewählten Probleme gibt.
+
+\subsection{Beispiel 1}
+\subsection{Beispiel 2}
+\subsection{Beispiel ...}
+
+\section{•}
+\subsection{•}
+
+\section{Lösung}
+\subsection{Umdenken der Menschen}
+\subsection{Nutzer freundlicheres Design}
+
+\section{Ananas}
+Hier gibt es eine Ananas.
+
+%% --------------------------------------------------------------------
+
+\section*{Abkürzungen}
+\addcontentsline{toc}{section}{Abkürzungen}
+
+\begin{acronym}
+\acro{API}{Application Programming Interface}
+\end{acronym}
+
+% Literaturverzeichnis
+\addcontentsline{toc}{section}{Literatur}
+\printbibliography
+
+\end{document}

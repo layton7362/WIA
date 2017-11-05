@@ -1,0 +1,96 @@
+% Encoding: windows-1252
+
+@Book{gong2003,
+  author    = {Gong, Li and Ellison, Gary},
+  title     = {Inside Java(TM) 2 Platform Security: Architecture, API Design, and Implementation},
+  year      = {2003},
+  edition   = {2nd},
+  publisher = {Pearson Education},
+  isbn      = {0201787911},
+}
+
+@article{myers2016,
+ author = {Myers, Brad A. and Stylos, Jeffrey},
+ title = {Improving API Usability},
+ journal = {Commun. ACM},
+ issue_date = {June 2016},
+ volume = {59},
+ number = {6},
+ month = may,
+ year = {2016},
+ issn = {0001-0782},
+ pages = {62--69},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/2896587},
+ doi = {10.1145/2896587},
+ acmid = {2896587},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@InProceedings{bloch2006,
+  author    = {Bloch, Joshua},
+  title     = {How to Design a Good API and Why It Matters},
+  booktitle = {Companion to the 21st ACM SIGPLAN Symposium on Object-oriented Programming Systems, Languages, and Applications},
+  year      = {2006},
+  series    = {OOPSLA '06},
+  publisher = {ACM},
+  location  = {Portland, Oregon, USA},
+  isbn      = {1-59593-491-X},
+  pages     = {506--507},
+  doi       = {10.1145/1176617.1176622},
+  url       = {http://doi.acm.org/10.1145/1176617.1176622},
+  acmid     = {1176622},
+  address   = {New York, NY, USA},
+  numpages  = {2},
+}
+
+@book {de2017,
+author    = {De, Brajesh},
+title = {API Management: An Architect's Guide to Developing and Managing APIs for Your Organization},
+address = {Berkeley, CA},
+year = {2017},
+publisher = {Apress},
+pages = {Online-Ressource (XIX, 195 p. 55 illus., 20 illus. in color, online resource)},
+URL = {http://dx.doi.org/10.1007/978-1-4842-1305-6},
+URL = {http://dx.doi.org/10.1007/978-1-4842-1305-6},
+type = {Text (nur fÃ¼r elektronische Ressourcen)},
+ISBN = {978-1-4842-1305-6},
+ISBN = {978-1-4842-1306-3 (Druck-Ausgabe)},
+}
+
+@Book{spichale2017,
+  author = {Spichale Kai},
+  title  = {API-Design: Praxishandbuch für Java- und Webservice-Entwickler},
+  year   = {2017},
+}
+
+@Book{martin2009,
+  author = {Robert C. Martin},
+  title  = {Clean Code: Refactoring, Patterns, Testen und Technicken für sauberen Code},
+  year   = {2009},
+}
+
+@Book{martin2011,
+  author = {Robert C. Martin},
+  title  = {Clean Coder: Verhaltensregeln für professionelle Programmierer},
+  year   = {2011},
+}
+
+@Online{sahni2017,
+  author = {Vinay Sahni},
+  title  = {Best Practices for Designing a Pragmatic RESTful API},
+  year   = {2017},
+  date   = {2017-11-05},
+  url    = {http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api},
+}
+
+@Online{mihaly2017,
+  author = {Ferenc Mihaly},
+  title  = {Java API Design Checklist},
+  year   = {2017},
+  date   = {2017-11-05},
+  url    = {https://theamiableapi.com/2012/01/16/java-api-design-checklist/},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
