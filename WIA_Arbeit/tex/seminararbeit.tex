@@ -2,9 +2,8 @@
 \documentclass[conference,compsoc,final,a4paper]{IEEEtran}
 \usepackage[utf8]{inputenx}
 
-%% Bitte legen Sie hier den Titel und den Autor der Arbeit fest
 \newcommand{\autoren}[0]{Salame, Ahmed}
-\newcommand{\dokumententitel}[0]{Gutes API Design}
+\newcommand{\dokumententitel}[0]{Wieso ein gutes API Design wichtig ist}
 
 \input{preambel} % Weitere Einstellungen aus einer anderen Datei lesen
 
@@ -15,37 +14,65 @@
 \begin{abstract}
 
 Dieses Paper stellt Kriterien für ein gutes \ac{API} Design. Es zeigt ebenso was schlechtes Design ausmacht anhand von paar Beispielen. Es werden verschiedene Ansätze aufgezeigt, mit dessen Hilfe die usability einer \ac{API} verbessern kann.
-
+\\---TODO---
 \end{abstract}
 
 \tableofcontents
 
-% Abschnitte mit \section und Unterabschnitte mit \subsection
 \section{Einleitung}
-\subsection{Definition einer \ac{API}}
-Gutes \ac{API} Design ist wichtig.
+Es soll hier erstmal erklärt werden, wie wichtig eine API ist für den Entwickler. 
 
-\section{Probleme von schlechten \ac{API}}
+\section{Application Programming Interface}
 
-Hier soll es einige Beispiele geben, die erklären sollen welche Probleme es gibt. Dabei soll Bezug genommen werden auf bekannte Probleme wie unglücklich gewählte Methodennamen etc. Danach wird auf potenzielle Lösungen Eingegangen (siehe Abschnitt \ref{db-loesung}).
 
-\section{Design Beispiele}\label{db-loesung}
+\subsection{Die Definition einer \ac{API}}
 
-Hier soll es einen Auszug geben, welche möglichen Lösungen zu ausgewählten Probleme gibt.
+Hier wird erstmal grob erklärt was eine API ist und wo es überall genutzt wird. Es soll die unterschiedlichen Typen einer API aufzeigen.
 
-\subsection{Beispiel 1}
-\subsection{Beispiel 2}
-\subsection{Beispiel ...}
+\subsection{Die Vorteile einer \ac{API}}
 
-\section{•}
-\subsection{•}
+Hier werden die Vorteile einer API aufgezeigt.
 
-\section{Lösung}
+\section{Probleme mit APIs}
+
+Hier soll es eine Erklärung geben für einige Negativ Beispiele.
+
+\subsection{Mangelnde Dokumentation}
+
+Hier soll es einige Beispiele geben, die erklären sollen welche Probleme es gibt. Dabei soll Bezug genommen werden auf bekannte Probleme wie unglücklich gewählte Methodennamen ,Parameter etc. Dabei werden hier Beispiele aus GWT und LibGDX genommen. Danach wird auf potenzielle Lösungen Eingegangen (siehe Abschnitt \ref{db-loesung}).
+
+\subsection{Falsches Nutzen der \ac{API} }
+
+Hier soll aufgezeigt werden, welche folgen es haben kann, falls eine API nicht richtig genutzt wird, weil es für den Nutzer nicht ersichtlich war, was nun genau vom Entwickler vorgesehen war, wie man die Methoden richtig nutzen soll. Es soll auf die Sicherheitslücken hinweisen. 
+
+\section{Ansätze zur Verbesserung allgemeiner \ac{API}s}
+
+Hier sollen potenzielle Lösungen aufgezeigt, wie man allgemein eine Bessere API bauen kann. 
+
 \subsection{Umdenken der Menschen}
+
+Hier soll es einen Ansatz geben, der sich damit befasst, dass man die usability einer API nicht unterschätzen sollte. Viele nehmen das nicht ernst und entwickeln nicht sorgfältig genug. 
+
 \subsection{Nutzer freundlicheres Design}
 
-\section{Ananas}
-Hier gibt es eine Ananas.
+Hier soll es eine erklärung geben, was genau die meisten Nutzer etwas als besonders benutzerfreundlich betrachten. Dabei soll auch Beispiele aufgezeigt werden, wie man sowas ermittelt
+
+\section{Ausgewählte \ac{API} Entwurfs Beispiele}\label{db-loesung}
+
+Hier soll es einen Auszug geben, welche möglichen Lösungen es zu ausgewählten Probleme gibt. Hier soll es unter anderem einige Beispiele geben, die typisch sind für clean code
+(Methodennamen, Parameter, namens Konventionen etc). Um zu verdeutlichen was genau gemeint ist, wird dabei Java/C++ code als Beispiel genommen. Dieser Abschnitt soll sich mehr mit der Technischen Seite befassen.
+
+\subsection{Methodennamen und ihre Parameter}
+
+Hier soll es erst mal ein Beispiel geben, welche Probleme auftreten könnten, wenn man sich bei dem schreiben einer Methode keine Gedanken macht, z.B. falsche Parameter übergaben oder zu viele Parameter.
+
+\subsection{Keine redundanten Methoden}
+
+Hier soll es aufzeigen, wieso man nicht für alles eine Methode schreiben sollte, wie z.B. beim einlesen von einem Images.
+
+\section{Fazit}
+
+Hier soll es nochmal einen Bezug auf die vorherigen Lösungsbeispielen geben und was für Vorteile es einem bringt. 
 
 %% --------------------------------------------------------------------
 

@@ -60,7 +60,7 @@ ISBN = {978-1-4842-1306-3 (Druck-Ausgabe)},
 }
 
 @Book{spichale2017,
-  author = {Spichale Kai},
+  author = {Spichale, Kai.},
   title  = {API-Design: Praxishandbuch für Java- und Webservice-Entwickler},
   year   = {2017},
 }
@@ -71,26 +71,58 @@ ISBN = {978-1-4842-1306-3 (Druck-Ausgabe)},
   year   = {2009},
 }
 
-@Book{martin2011,
-  author = {Robert C. Martin},
-  title  = {Clean Coder: Verhaltensregeln für professionelle Programmierer},
-  year   = {2011},
-}
-
-@Online{sahni2017,
-  author = {Vinay Sahni},
+@Online{sahni2015,
+  author = {Sahni, Vinay.},
   title  = {Best Practices for Designing a Pragmatic RESTful API},
-  year   = {2017},
+  year   = {2015},
   date   = {2017-11-05},
   url    = {http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api},
 }
 
-@Online{mihaly2017,
-  author = {Ferenc Mihaly},
+@Online{mihaly2012,
+  author = {Mihaly, Ferenc.},
   title  = {Java API Design Checklist},
-  year   = {2017},
+  year   = {2012},
   date   = {2017-11-05},
   url    = {https://theamiableapi.com/2012/01/16/java-api-design-checklist/},
+}
+
+@Online{anthony2016,
+  author = {Art, Anthony.},
+  title  = {8 Keys To Creating A Truly Usable API},
+  year   = {2016},
+  date   = {2017-11-05},
+  url    = {https://nordicapis.com/8-keys-to-creating-a-truly-usable-api/},
+}
+
+@Online{clarke2003,
+  author = {Clarke, Steven.},
+  title  = {API usability and the cognitive dimensions framework},
+  year   = {2003},
+  date   = {2017-11-05},
+  url    = {https://blogs.msdn.microsoft.com/stevencl/2003/10/08/api-usability-and-the-cognitive-dimensions-framework/},
+}
+
+@Online{clarke2004,
+  author = {Clarke, Steven.},
+  title  = {Measuring API Usability},
+  year   = {2004},
+  date   = {2017-11-05},
+  url    = {http://www.drdobbs.com/windows/measuring-api-usability/184405654},
+}
+
+@Article{myers2015,
+  author = {Brad A. Myers, Jeffrey Stylos},
+  title  = {Improving API Usability},
+  year   = {2015},
+  date   = {2017-11-05},
+}
+
+@Book{siriwardena2014,
+  author = {Siriwardena, Prabath},
+  title  = {Advanced API Security},
+  year   = {2014},
+  date   = {2017-11-06},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

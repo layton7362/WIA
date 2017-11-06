@@ -16,53 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \sortlist[entry]{nty/global/}
-    \entry{myers2016}{article}{}
-      \name{author}{2}{}{%
-        {{hash=46912f2996fcc6201d2f9f597bdc5dde}{%
-           family={Myers},
-           familyi={M\bibinitperiod},
-           given={Brad\bibnamedelima A.},
-           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=b6fc34909992c86cf168620c50cabe2a}{%
-           family={Stylos},
-           familyi={S\bibinitperiod},
-           given={Jeffrey},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
-      \strng{namehash}{ac600761a12c760b4cd49d6291fffc0c}
-      \strng{fullhash}{ac600761a12c760b4cd49d6291fffc0c}
-      \strng{authornamehash}{ac600761a12c760b4cd49d6291fffc0c}
-      \strng{authorfullhash}{ac600761a12c760b4cd49d6291fffc0c}
-      \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0001-0782}
-      \field{journaltitle}{Commun. ACM}
-      \field{month}{5}
-      \field{number}{6}
-      \field{title}{Improving API Usability}
-      \field{volume}{59}
-      \field{year}{2016}
-      \field{pages}{62\bibrangedash 69}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1145/2896587
-      \endverb
-      \verb{url}
-      \verb http://doi.acm.org/10.1145/2896587
-      \endverb
-    \endentry
-  \endsortlist
-\endrefsection
 \endinput
 
