@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.8 $
+% $ biblatex bbl format version 2.6 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,5 +16,33 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{bloch2014}{online}{}
+      \name{author}{1}{}{%
+        {{hash=577c9b87d02f133dc6423f84705048f8}{%
+           family={Bloch},
+           family_i={B\bibinitperiod},
+           given={Joshua},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{577c9b87d02f133dc6423f84705048f8}
+      \strng{fullhash}{577c9b87d02f133dc6423f84705048f8}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{11}
+      \field{title}{A Brief, Opinionated History of the API}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=ege-kub1qtk
+      \endverb
+      \warn{\item Overwriting field 'year' with year value from field 'date' for entry 'bloch2014'}
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
 
