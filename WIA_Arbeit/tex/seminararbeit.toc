@@ -4,32 +4,48 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Application Programming Interface}{1}{section.4}
+\contentsline {section}{\numberline {2}Application Programming Interface}{1}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Die Definition einer \ac {API}}{1}{subsection.5}
+\contentsline {subsection}{\numberline {2.1}Die Definition einer \ac {API}}{1}{subsection.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Die Vorteile einer \ac {API}}{1}{subsection.6}
+\contentsline {subsection}{\numberline {2.2}Die Arten einer API}{1}{subsection.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Probleme mit APIs}{1}{section.7}
+\contentsline {subsection}{\numberline {2.3}Die Vorteile einer API}{2}{subsection.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Mangelnde Dokumentation}{1}{subsection.8}
+\contentsline {section}{\numberline {3}Beispiele vom Schlechtem API Design}{2}{section.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Falsches Nutzen der \ac {API} }{1}{subsection.9}
+\contentsline {subsection}{\numberline {3.1}Mangelnde Dokumentation}{2}{subsection.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Ans\IeC {\"a}tze zur Verbesserung allgemeiner \ac {API}s}{1}{section.10}
+\contentsline {subsection}{\numberline {3.2}Eindeutige Bezeichnungen von Schnittstellen}{3}{subsection.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Umdenken der Menschen}{1}{subsection.11}
+\contentsline {subsection}{\numberline {3.3}Keine Konsistente Benennung der Bezeichner}{3}{subsection.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Nutzer freundlicheres Design}{1}{subsection.12}
+\contentsline {section}{\numberline {4}Ans\IeC {\"a}tze zur Verbesserung allgemeiner \ac {API}s}{3}{section.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Ausgew\IeC {\"a}hlte \ac {API} Entwurfs Beispiele}{1}{section.13}
+\contentsline {subsection}{\numberline {4.1}Umdenken der Menschen}{4}{subsection.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Methodennamen und ihre Parameter}{2}{subsection.14}
+\contentsline {subsection}{\numberline {4.2}Nutzer freundlicheres Design}{4}{subsection.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Keine redundanten Methoden}{2}{subsection.15}
+\contentsline {subsection}{\numberline {4.3}APIs Testen}{4}{subsection.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{2}{section.16}
+\contentsline {section}{\numberline {5}Ausgew\IeC {\"a}hlte \ac {API} Entwurfs Beispiele}{4}{section.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Abk\IeC {\"u}rzungen}{2}{section*.17}
+\contentsline {subsection}{\numberline {5.1}Sinnvolle Klassennamen w\IeC {\"a}hlen}{4}{subsection.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatur}{2}{section*.17}
+\contentsline {subsection}{\numberline {5.2}Methodennamen und ihre Parameter}{4}{subsection.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Keine redundanten Methoden}{4}{subsection.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Refactoring}{4}{subsection.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Tools zur Unterst\IeC {\"u}tzung der Entwicklung einer API}{4}{section.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Entwicklungsumgebung}{4}{subsection.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Das Programm Checkstyle}{4}{subsection.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Fazit}{5}{section.63}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Abk\IeC {\"u}rzungen}{5}{section*.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Literatur}{5}{section*.64}

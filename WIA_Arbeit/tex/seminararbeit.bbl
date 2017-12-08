@@ -42,6 +42,202 @@
       \endverb
       \warn{\item Overwriting field 'year' with year value from field 'date' for entry 'bloch2014'}
     \endentry
+    \entry{bloch2009}{online}{}
+      \name{author}{1}{}{%
+        {{hash=577c9b87d02f133dc6423f84705048f8}{%
+           family={Bloch},
+           family_i={B\bibinitperiod},
+           given={Joshua},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{577c9b87d02f133dc6423f84705048f8}
+      \strng{fullhash}{577c9b87d02f133dc6423f84705048f8}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Effective Java - Still Effective After All These Years}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=V1vQf4qyMXg
+      \endverb
+      \warn{\item Datamodel: Entry 'bloch2009' (literatur.bib): Invalid format '2017-12-5' of date field 'date' - ignoring}
+    \endentry
+    \entry{bloch2006}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=577c9b87d02f133dc6423f84705048f8}{%
+           family={Bloch},
+           family_i={B\bibinitperiod},
+           given={Joshua},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Portland, Oregon, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{577c9b87d02f133dc6423f84705048f8}
+      \strng{fullhash}{577c9b87d02f133dc6423f84705048f8}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Companion to the 21st ACM SIGPLAN Symposium on Object-oriented Programming Systems, Languages, and Applications}
+      \field{isbn}{1-59593-491-X}
+      \field{series}{OOPSLA '06}
+      \field{title}{How to Design a Good API and Why It Matters}
+      \field{year}{2006}
+      \field{pages}{506\bibrangedash 507}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1145/1176617.1176622
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/1176617.1176622
+      \endverb
+    \endentry
+    \entry{dimitri2017}{online}{}
+      \name{author}{1}{}{%
+        {{hash=263808d11755b75a549fa1bbec6a0fe7}{%
+           prefix={van},
+           prefix_i={v\bibinitperiod},
+           family={Heesch},
+           family_i={H\bibinitperiod},
+           given={Dimitri},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{263808d11755b75a549fa1bbec6a0fe7}
+      \strng{fullhash}{263808d11755b75a549fa1bbec6a0fe7}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{04}
+      \field{month}{12}
+      \field{title}{Oxygen}
+      \field{year}{2017}
+    \endentry
+    \entry{martin2009}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4931846e75da8be6bca9cac98c006a70}{%
+           family={Martin},
+           family_i={M\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           given_i={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4931846e75da8be6bca9cac98c006a70}
+      \strng{fullhash}{4931846e75da8be6bca9cac98c006a70}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Clean Code: Refactoring, Patterns, Testen und Technicken für sauberen Code}
+      \field{year}{2009}
+    \endentry
+    \entry{myers2016}{article}{}
+      \name{author}{2}{}{%
+        {{hash=46912f2996fcc6201d2f9f597bdc5dde}{%
+           family={Myers},
+           family_i={M\bibinitperiod},
+           given={Brad\bibnamedelima A.},
+           given_i={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b6fc34909992c86cf168620c50cabe2a}{%
+           family={Stylos},
+           family_i={S\bibinitperiod},
+           given={Jeffrey},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{ac600761a12c760b4cd49d6291fffc0c}
+      \strng{fullhash}{ac600761a12c760b4cd49d6291fffc0c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{05}
+      \field{number}{6}
+      \field{title}{Improving API Usability}
+      \field{volume}{59}
+      \field{year}{2016}
+      \field{pages}{62\bibrangedash 69}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/2896587
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/2896587
+      \endverb
+    \endentry
+    \entry{oracle2017}{online}{}
+      \name{author}{1}{}{%
+        {{hash=30162ed78b6c10f731411f2fc440c24f}{%
+           family={Oracle},
+           family_i={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{04}
+      \field{month}{12}
+      \field{title}{Javadoc Tool}
+      \field{year}{2017}
+      \verb{url}
+      \verb http://www.oracle.com/technetwork/java/javase/documentation/javadoc-137458.html
+      \endverb
+    \endentry
+    \entry{reddy2011}{book}{}
+      \name{author}{1}{}{%
+        {{hash=83deab8e3db4ef951ecbcc78e41fafbf}{%
+           family={Reddy},
+           family_i={R\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann Publishers Inc.}%
+      }
+      \strng{namehash}{83deab8e3db4ef951ecbcc78e41fafbf}
+      \strng{fullhash}{83deab8e3db4ef951ecbcc78e41fafbf}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{9780123850034}
+      \field{title}{API Design for C++}
+      \field{year}{2011}
+    \endentry
+    \entry{spichale2017}{book}{}
+      \name{author}{1}{}{%
+        {{hash=969aac1d92b7357931108d444c647848}{%
+           family={Spichale},
+           family_i={S\bibinitperiod},
+           given={Kai.},
+           given_i={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{969aac1d92b7357931108d444c647848}
+      \strng{fullhash}{969aac1d92b7357931108d444c647848}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{API-Design: Praxishandbuch für Java- und Webservice-Entwickler}
+      \field{year}{2017}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
