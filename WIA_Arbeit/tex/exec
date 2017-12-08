@@ -1,0 +1,3 @@
+#!/bin/bash
+pdflatex seminararbeit.tex && biber seminararbeit && pdflatex seminararbeit.tex && pdflatex seminararbeit.tex
+
