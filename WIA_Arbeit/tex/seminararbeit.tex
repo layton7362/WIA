@@ -23,24 +23,34 @@ Dieses Paper soll aufzeigen was eine \ac{API} ist und was daran wichtig ist für
 % Einheitliche Bezeichungen "Entwickler" stattt "Nutzer"
 \section{Einleitung}
 
-Application Programming Interfaces(API) sind kaum wegzudenken. So gut wie alle Programmbibliotheken, Frameworks und \ac{SDK} nutzen eine. Auf programmableweb\footnote{https://www.programmableweb.com/} werden über 18.000 APIs aufgelistet.
+Application Programming Interfaces(API) sind kaum wegzudenken. So gut wie alle Programmbibliotheken, Frameworks und \ac{SDK} nutzen eine API. Auf der Webseite programmableweb\footnote{https://www.programmableweb.com/} werden allein über 18.000 unterschiedliche APIs aufgelistet.
 \\
-Für die Entwicklung einer API gibt es ein immer größer werdender Markt für Firmen, die aktiv bei der Entwicklung der APIs bei anderen Unternehmen aushelfen, wie Apigee\footnote{https://apigee.com/api-management/}.
+Für die Entwicklung neuer APIs gibt es ein immer größer werdender Markt für Firmen, die aktiv bei der Entwicklung der APIs bei anderen Unternehmen aushelfen, wie Apigee\footnote{https://apigee.com/api-management/}.
 \\
 Firmen haben auch unterschiedliche Strategien, wie sie mit ihren APIs umgehen \cite[siehe Seite 11]{spichale2017}. 
-So hat der Blogging-Dienst Twitter seine Popularität unter anderem durch die gute API zu verdanken. Es bot die notwendige Infrastruktur, so dass Twitter auf unzähligen Endgeräte genutzt werden konnte. Facebook setzt mit ihrer API auf ausfallsicher und Skalierbarkeit. Oder die Firma Best Buy entwickelte eine API, um ihren Online-Dienst auszubauen. 
+So hat der Blogging-Dienst Twitter seine Popularität unter anderem durch dessen gute API zu verdanken. Es bot die notwendige Infrastruktur, so dass Twitter auf unzähligen Endgeräte genutzt werden konnte. Facebook setzt mit ihrer API auf ausfallsicher und Skalierbarkeit. Oder die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen. 
 
 \section{Application Programming Interface}
 
 \subsection{Die Definition einer \ac{API}}
 
-Eine \ac{API} besitzt keine einheitliche Definition. Die unterschiedlichen Erklärungsansätze weichen an bestimmten Punkten voneinander ab. Allgemein kann eine \ac{API} als etwas beschreiben, dass dem Nutzer zur Verfügung gestellt wird, so dass dieser darüber mit einem Softwaresystem kommunizieren kann.
-Laut Bloch \cite{bloch2014} handelt es sich um eine \ac{API}, wenn sie folgende Kriterien erfüllt:
+Eine \ac{API} besitzt keine einheitliche Definition. Die unterschiedlichen Erklärungsansätze weichen an bestimmten Punkten voneinander ab. So beschreibt Reddy\cite{reddy2011}, dass eine API Schnittstellen hat, die eine Abstraktion eines Problems darstellen und wie Entwickler diese Nutzen, um ihr bestehendes Problem zu lösen.
+Blochs Definition ist dabei etwas Allgemeiner. Laut Bloch \cite{bloch2014} handelt es sich um eine \ac{API}, wenn sie folgende Kriterien erfüllt:
 \begin{enumerate}
 \item Eine API bietet eine Menge an Operationen an, welche durch ihre Eingaben und Ausgaben definiert sind.\\
 \item Es ist möglich die Schnittstellen neu zu Implementieren, ohne dass der Nutzer seinen Code anpassen muss.
 \end{enumerate}
+Allgemein kann eine \ac{API} als etwas beschrieben werden, dass dem Nutzer zur Verfügung gestellt wird, so dass dieser darüber mit einem Softwaresystem kommunizieren kann.
 Im folgenden Paper wird diese Definition zu Grunde gelegt.\\
+Folgende Beispielhafte Java Methode soll verdeutlichen wie eine Schnittstelle konkret aussehen kann:
+
+\begin{lstlisting}[language=Java,caption=Beispiel einer Schnittstelle]
+
+public String linkStrings(String head , String tail);
+
+\end{lstlisting}
+
+Der Name der Schnittstelle lautet linkStrings, ihre Eingaben sind Zwei Strings, mit den Bezeichnern head und tail. Bei der Ausgabe der Methode handelt es sich um den Rückgabewert, welches in diesem Fall als Typ auch ein String ist.
 
 \subsection{Die Arten einer API}
 
@@ -73,11 +83,13 @@ Durch das wiederverwenden von \ac{API}, ob nun eigene oder von anderen, kann man
 Es gibt als Beispiel viele APIs, die sich mit dem laden von Bildern beschäftigen\footnote{http://cimg.eu/}. Viele solcher Bibliotheken haben bereits einen gewissen Reifeprozess durchgemacht. Sie wurden ausgiebig getestet und haben womöglich auch ein breites Spektrum an Informationen. Als Beispiel ist hier die Spiele-Bibliothek LibGDX zu nennen. Es hat eine große Community, an die sich Entwickler wenden können, falls sie fragen haben\footnote{http://www.badlogicgames.com/forum/}.
 \end{description}
 
+Zusätzlich schreibt Spichale, dass mithilfe von gutem API Design es einfacher ist, dass die Entwickler, welche diese Schnittstellen letztendlich Implementieren, es einfacher haben ihren Code sauber zu halten, so dass sie dem Allgemeinen stand vom Clean Code entspreche.\cite[siehe Seite 39]{spichale2017}.
+
 \section{Beispiele vom Schlechtem API Design}
 
 Es gibt sehr viele Programmbibliotheken, die sehr viele Schnittstellen anbieten, auf welche die Entwickler zugriff haben. Bei einer Erweiterung der Bibliothek kommen zudem immer mehr Schnittstellen hinzu. Wo in dem \ac{JDK} aus Java 8 sich noch 4240 Klassen befinden\footnote{https://docs.oracle.com/javase/8/docs/api/}, hat dessen Nachfolger Java 9 bereits 6005 Klassen\footnote{https://docs.oracle.com/javase/9/docs/api/}. Bei einer solch wachsenden Anzahl an Klassen ist es wichtig sich ein Konzept auszudenken, damit der Entwickler bei der Bibliothek keine Schwierigkeiten bekommt. Wenn einzelne Punkte nicht eingehalten werden, kann der Entwickler schnell die Überblick verlieren. Der Erfolg einer Bibliothek kann unter anderem dadurch gemessen werden, wie häufig sie von Verschiedenen Entwicklern genutzt wird. In diesem Kapitel werden Punkte aufgezählt, die den Erfolg einer Bibliothek bestimmen können.
 
-\subsection{Mangelnde Dokumentation}\label{MD}
+\subsection{Eine Mangelnde Dokumentation}\label{MD}
 
 Die Dokumentation einer Bibliothek beschreibt ihre Funktionalität, auf die der Entwickler zugreifen kann. So werden die Schnittstellen der Bibliothek hier definiert, sowie mit einer zusätzlichen Beschreibung versehen. Zusätzlich kann eine Dokumentation noch weitere Punkte beinhalten, wie Namens Konventionen. Ein bekanntes Beispiel hierfür ist die Java Dokumentation von Oracle. Hier werden alle Klassen auf die ein Entwickler Zugriff hat angezeigt. Neben einer Beschreibung der Klassen, gibt es in der Java API Dokumentation auch  eine Beschreibung für die Methoden einer Klasse.
 \\\\
@@ -85,29 +97,35 @@ Für das erstellen von Dokumentation gibt es viele Möglichkeiten. Die Programmi
 \\
 Ein Ähnliches Tool für das erstellen für die Dokumentation ist Oxygen\cite{dimitri2017}. Oxygen steht dabei nicht nur für Java zur Verfügung, sondern auch für andere Programmiersprachen wie C, C++ oder Python.
 
-\subsection{Eindeutige Bezeichnungen von Schnittstellen}
+\subsection{Keine Eindeutigen Bezeichnungen von Schnittstellen}
 
 Falls eine Dokumentation die API nicht gut genug Dokumentiert, so dass z.B. eine Methode nicht genau beschrieben wird wie sie intern Funktioniert, kann es dazu führen, dass ein Entwickler eine Schnittstelle der API falsch nutzt.  
 
 %Negatives Beispiele
 Die Java Klasse java.util.Calendar\footnote{https://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html} besitzt folgende Methode:
 
-\begin{lstlisting}[language=Java,caption=Methode set(...)]
+\begin{lstlisting}[language=Java,caption=Signatur der Methode set]
+
 public final void set(int year, int month, int date)
+
 \end{lstlisting}
 
 Anhand der Parameter wäre es naheliegend, das beim Aufruf mit dem folgenden Werten die Methode das Datum auf den 22 August 2017 setzt:
 
 \begin{lstlisting}[language=Java,caption=Setzten eines Datums]
+
 Calendar cal = Calendar.getInstance();
 
 cal.set(2017, 8, 22);
+
 \end{lstlisting}
 
 Allerdings sieht man anhand der Beschreibung der Methode das bei der Eingabe vom Monat, der Januar nicht mit der Eins sondern mit der Null beginnt. Also wäre das Datum, das im obigen Beispiel gesetzt wurde, der 22 September 2017. Vorgesehen ist es, es folgendermaßen zu machen:
 
 \begin{lstlisting}[language=Java,caption=Setzten eines Datums mit Konstante]
+
 cal.set(2017, Calendar.AUGUST, 22);
+
 \end{lstlisting}
 
 Es wird keine Zahl der Methode als Monat übergeben, sondern eine Konstante. Auch wenn die Methode set(...) dokumentiert ist, so liegt die Benennung ihrer Parameter nahe dass der Entwickler, beim nutzen dieser Methode, ihr einfach Zahlen übergeben kann, und er so die Dokumentation nicht zu lesen braucht. Tatsächlich soll laut Bloch\cite{bloch2006} eine Methoden so funktionieren, dass es einfach ist sie zu nutzen, aber schwierig, die Methode falsch zu nutzten. Idealerweise verhindert man das Falsche nutzen einer Methode komplett. Zudem soll eine Methode einer API nicht zwangsweise Dokumentiert sein, wenn der Bezeichner der Methode und ihre Parameter das Nutzen nahelegen. 
@@ -115,12 +133,15 @@ Es wird keine Zahl der Methode als Monat übergeben, sondern eine Konstante. Auc
 Ein anderes Beispiel für eine Methode, die zum Missverständnis führen kann\cite[ab Minute 7]{bloch2009}, ist folgende Methode:
 
 \begin{lstlisting}[language=Java,caption=getBoolean methode aus java.lang.Boolean]
+
 public static boolean getBoolean(String name);
+
 \end{lstlisting}
 
 Sie stammt aus der Klasse java.lang.Boolean\footnote{https://docs.oracle.com/javase/9/docs/api/java/lang/Boolean.html}. In Java gibt es Wrapperklassen, die Objekte der primitiven Datentypen darstellen, wie int, double oder auch boolean. Daher gibt es jeweils für jeden Primitiven Datentyp eine Wrapperklasse, für den Datentyp int wäre es z.B. java.lang.Integer. Jede Klasse besitzt eine Methode, dessen Name mit set anfängt, so wie setInteger oder wie im Beispiel setBoolean. Es liegt nahe, dass viele Entwickler zunächst annehmen würden, das beim Aufruf der Methode getValue der Wert true geliefert wird.
 
 \begin{lstlisting}[language=Java,caption=Beispiel mit getValue]
+
 public boolean getValue(){
 	boolean bol = getBoolean("true");
 	if(bol == true){
@@ -129,13 +150,49 @@ public boolean getValue(){
 		return false;
 	}
 }
+
 \end{lstlisting}
 
 Allerdings wird hier false geliefert. In der Dokumentation dieser Methode ist zu entnehmen, dass die Methode getBoolean nur dann true liefert, falls es ein System Property gibt, welches den Name hat, den diese Methode als String bekommt. Diese Vorgehensweise ist irreführend, das kann für Frust sorgen und für Programmfehlern.
 
-\subsection{Keine Konsistente Benennung der Bezeichner}
+\subsection{Keine Konsistente Methodenbezeichner}
 
-Für einen Entwickler ist es wichtig, dass dieser sich in der API zurechtfindet. 
+Wenn sich ein Entwickler in einer neuen Bibliothek einarbeiten soll, dann gibt es mehrere Ansätze wie sich der Entwickler einarbeiten kann. Zunächst kann er dies tun, indem er die Dokumentation der Schnittstellen der Bibliothek ansieht\ref{MD}. Allerdings kann dies auch, oder zusätzlich, durch Ausprobieren der Schnittstellen geschehen. --TODO-- Verweis auf irgendwas
+
+Laut Martin\cite[siehe Seite 51f]{martin2009} sind daher beim Design einer API für die Schnittstellen Namen zu wählen, nach denen der Entwickler einfacher suchen kann. Zudem sind auch Namen besser geeignet, die eine entsprechende Länge haben, je nach Umfang der Schnittstelle.
+
+\subsection{Kein Factory Pattern}
+
+Das Factory Pattern ist ein Entwurfsmuster, welches von der Gang of Four im Buch Design Pattern beschrieben wird\cite{gamme1995}. Es wird dazu genutzt, dass der Entwickler, um eine Klasse zu instanziieren, es nicht über den Konstruktor tätigt, sondern über eine Methode. Der Entwickler soll so nicht mit dem Konstruktor in Berührung kommen. Dies hat insbesondere den Vorteil, dass es so möglich ist, den Typ eines Objektes zur Laufzeit zu bestimmen.
+Folgender Codeausschnitt soll eine Beispielhafte Implementierung zeigen:
+
+\begin{lstlisting}[language=Java,caption=Beispiel eines Factory Patterns in Java]
+
+public class Factory
+{
+    public static Base factoryMethod(int typeNumber)
+    {
+        switch (typeNumber)
+        {
+            case 1: return new ConcreteProduct1();
+            case 2: return new ConcreteProduct2();
+            default: throw new ArgumentException("Invalid type.", "type");
+        }
+    }
+}
+ 
+public abstract class Base { }
+ 
+public class ConcreteBase1 extends Base { }
+ 
+public class ConcreteBase2 extends Base { } 
+
+\end{lstlisting}
+
+In dem obigen Code Beispiel werden über die Klasse Factory, die Objekte für die Klasse ConcreteBase1 und ConcreteBase2 erzeugt. So kann der Entwickler, der diese Klassen benötigt, sie nicht nur über die eigentliche Klassen erzeugen, sondern auch über die statische Methode factoryMethod in der Klasse Factory. 
+\\
+
+--TODO--\cite{ellis2007}
 
 \section{Ansätze zur Verbesserung allgemeiner \ac{API}s}
 
@@ -145,11 +202,11 @@ Folgend werden einige Vorgehensweisen beschrieben, die Aufzeigen sollen, wie daf
 
 \subsection{Umdenken der Menschen}
 
-Hier soll es einen Ansatz geben, der sich damit befasst, dass man die usability einer API nicht unterschätzen sollte. Viele nehmen das nicht ernst und entwickeln nicht sorgfältig genug. 
+--TODO-- Hier soll es einen Ansatz geben, der sich damit befasst, dass man die usability einer API nicht unterschätzen sollte. Viele nehmen das nicht ernst und entwickeln nicht sorgfältig genug. 
 
 \subsection{Nutzer freundlicheres Design}
 
-Hier soll es eine erklärung geben, was genau die meisten Nutzer etwas als besonders benutzerfreundlich betrachten. Dabei soll auch Beispiele aufgezeigt werden, wie man sowas ermittelt
+--TODO-- Hier soll es eine erklärung geben, was genau die meisten Nutzer etwas als besonders benutzerfreundlich betrachten. Dabei soll auch Beispiele aufgezeigt werden, wie man sowas ermittelt
 
 \subsection{APIs Testen}
 
@@ -165,14 +222,14 @@ Eine API, die Nutzerfreundlich ist, erspart einem Entwickler, der diese API nutz
 Hier soll es einen Auszug geben, welche möglichen Lösungen es zu ausgewählten Probleme gibt. Hier soll es unter anderem einige Beispiele geben, die typisch sind für clean code
 (Methodennamen, Parameter, namens Konventionen etc). Um zu verdeutlichen was genau gemeint ist, wird dabei Java/C++ code als Beispiel genommen. Dieser Abschnitt soll sich mehr mit der Technischen Seite befassen.
 
-
 \subsection{Sinnvolle Klassennamen wählen}
 
+In Programmiersprachen die Objektorientiert sind, wie Java oder C++, sind die Namen der Klassen ebenso Relevant wie die Methodennamen. In reine Objektorientierte Sprache ist es umso wichtiger, da die Objekte alle Schnittstellen nach außen anbieten, auf die dann der Nutzer dieser API zugriff hat. Zudem sind viele Objekte, ob durch Vererbung oder weil bei einer Methode als Parameter erwartet, miteinander Verbunden.  
+--TODO--
 
+\subsection{Methodennamen und ihre Parameter}\label{MNP}
 
-\subsection{Methodennamen und ihre Parameter}
-
-Der Name einer Methode sollten idealerweise ihren Zweck beschreiben. Einen Namen gut zu wählen kann viel Zeit kosten, allerdings erleichtert es dem Entwickler, welcher eine API nutzt, die Suche nach einer Passenden Methode\cite{martin2009}.
+Der Name einer Methode sollten idealerweise ihren Zweck beschreiben. Einen Namen gut zu wählen kann viel Zeit kosten, allerdings erleichtert es dem Entwickler, welche eine API nutzt, die Suche nach einer Passenden Methode\cite[siehe Seite 45f]{martin2009}. Zudem Hilft es auch beim Verbessern der API, da so einige 
 
 Hier soll es erst mal ein Beispiel geben, welche Probleme auftreten könnten, wenn man sich bei dem schreiben einer Methode keine Gedanken macht, z.B. falsche Parameter übergaben oder zu viele Parameter.
 
@@ -182,9 +239,21 @@ Hier soll es aufzeigen, wieso man nicht für alles eine Methode schreiben sollte
 
 \subsection{Refactoring}\label{refactorL}
 
-Hier soll aufgezeigt werden, das durch Refactoring  bestehenden code ausbessern kann. 
-Es gibt unzählige 
+Das Refactoring beschreibt laut Fowler einen Prozess, bei dem bestehender Quellcode so verändern wird, dass es für denjenigen, der diesen Quellcode nutzt, keinen Einfluss haben wird\cite{fowler1999}. Mit Das Refactoring wird versucht bestehenden Quellcode so zu verbessern, dass die Chancen minimiert werden, dass an einigen Stellen Programmfehler auftreten. Zudem wird meist Zusätzlich auch der Quellcode verbessert, so dass es besser lesbar und somit wartbar ist. Nach Fowler ist das Refactoring keine zusätzliche Arbeit, sondern ein fester Bestandteil bei der Software Entwicklung.
 
+Auch wenn ein gutes Design der API vorliegen sollte, kann es bei zusätzlichen Erweiterungen dazu kommen, dass die Schnittstellen nicht mehr nach dem ursprünglichen Prinzip Designt worden sind. So könnte eine Namenskonvention nicht eingehalten worden sein \ref{MNP}. Es kann auch vorkommen, dass die Namen der Parameter einer Methode nicht aussagekräftig genug sind und dies zur Verwirrung führen könnte. Falls die API noch nicht veröffentlicht wurde, ist es zudem auch möglich die Schnittstellen selber neu zu beschreiben. 
+
+Das Refactoring kann dazu genutzt werden, solche vorhandene Missstände auszubessern und den Quellcode leserlicher und für den Entwickler, der diese API nutzt, den Stress zu lindern. 
+ 
+Als Beispiel soll folgende Schnittstelle dienen.
+ 
+\begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
+
+public void foo(int[] a , int[] b);
+
+\end{lstlisting}
+
+--TODO--
 \section{Tools zur Unterstützung der Entwicklung einer API}
 
 Bei dem Entwickeln einer API kann es sehr langwierig sein diese zu Programmieren und zu Testen. Viele Bibliotheken haben mehrere tausende Schnittstellen, was zu sehr unübersichtlichen Code führen kann. Es gibt allerdings viele Tools, die einem das Arbeiten erleichtern. Im Folgenden werden einige Tools vorgestellt und dessen Vorteile dargestellt. 
@@ -199,10 +268,11 @@ Die beliebteste Entwicklungsumgebung laut \ac{PYPL} ist das in Java geschriebene
 
 Entwicklungsumgebungen sind eine große Hilfe beim Entwickeln und verbessern einer API. Da die Entwickler meist über eine Entwicklungsumgebung auf eine API zugreifen, kann man leicht nachverfolgen, wie die natürliche Arbeitsweise eines Entwicklers ist der diese API nutzt. 
 
-In vielen Entwicklungsumgebungen haben die Entwickler die Möglichkeit die Texteingabe Automatisch zu vervollständigen. So werden zum Beispiel bei der Eingabe von "get" in Eclipse mithilfe von den Tasten STRG und LEERTASTE unter anderem sämtliche Methoden aufgelistet, auf die der Entwickler Zugreifen kann. So hat der Entwickler jederzeit die Möglichkeit nach einer Methode zu suchen, die sein aktuelles Problem lösen kann. Dies hat den Vorteil, dass so überprüft werden kann, wie der natürliche verlauf von vielen Entwickler beim Entwickeln ist und wie der Entwickler mit einer API zurechtkommt. 
+In vielen Entwicklungsumgebungen haben die Entwickler die Möglichkeit die Texteingabe Automatisch zu vervollständigen. So werden zum Beispiel bei der Eingabe von get in Eclipse mithilfe von den Tasten STRG und LEERTASTE unter anderem sämtliche Methoden aufgelistet, auf die der Entwickler Zugreifen kann. So hat der Entwickler jederzeit die Möglichkeit nach einer Methode zu suchen, die sein aktuelles Problem lösen kann. Dies hat den Vorteil, dass so überprüft werden kann, wie der natürliche verlauf von vielen Entwickler beim Entwickeln ist und wie der Entwickler mit einer API zurechtkommt. 
 
 \subsection{Das Programm Checkstyle}
 
+--TODO--
 Das Programm checkstyle kann dazu helfen, dass man gewisse 
 
 \section{Fazit}
