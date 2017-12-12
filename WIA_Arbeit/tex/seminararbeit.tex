@@ -25,7 +25,7 @@ Dieses Paper soll aufzeigen was eine \ac{API} ist und was daran wichtig ist für
 
 Application Programming Interfaces(API) sind kaum wegzudenken. So gut wie alle Programmbibliotheken, Frameworks und \ac{SDK} nutzen eine API. Auf der Webseite programmableweb\footnote{https://www.programmableweb.com/} werden allein über 18.000 unterschiedliche APIs aufgelistet.
 
-Für die Entwicklung neuer APIs gibt es ein immer größer werdender Markt für Firmen, die aktiv bei der Entwicklung der APIs bei anderen Unternehmen aushelfen, wie Apigee\footnote{https://apigee.com/api-management/}.
+Für die Entwicklung neuer APIs gibt es ein immer größer werdender Markt für Firmen, die aktiv bei der Entwicklung der APIs bei anderen Unternehmen aushelfen, wie Apigee \footnote{https://apigee.com/api-management/}.
 
 Zudem besitzen Firmen unterschiedliche Strategien, wie sie mit ihren APIs umgehen \cite[siehe Seite 11]{spichale2017}. 
 So hat der Blogging-Dienst Twitter seine Popularität unter anderem durch dessen gute API zu verdanken. Es bot die notwendige Infrastruktur, so dass Twitter auf unzähligen Endgeräte genutzt werden konnte. Facebook setzt mit ihrer API auf ausfallsicher und Skalierbarkeit. Oder die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen. 
@@ -90,16 +90,17 @@ Es gibt als Beispiel viele APIs, die sich mit dem laden von Bildern beschäftige
 
 Zusätzlich schreibt Spichale, dass mithilfe von gutem API Design es einfacher ist, dass die Entwickler, welche diese Schnittstellen letztendlich Implementieren, es einfacher haben ihren Code sauber zu halten, so dass sie dem Allgemeinen stand vom Clean Code entspreche \cite[siehe Seite 39]{spichale2017}.
 
+
 \section{Beispiele von Schlechten API Design}
 
-Es gibt sehr viele Programmbibliotheken, die sehr viele Schnittstellen anbieten, auf welche die Entwickler zugriff haben. Bei einer Erweiterung der Bibliothek kommen zudem immer mehr Schnittstellen hinzu. Wo in dem \ac{JDK} aus Java 8 sich noch 4240 Klassen befinden\footnote{https://docs.oracle.com/javase/8/docs/api/}, hat dessen Nachfolger Java 9 bereits 6005 Klassen\footnote{https://docs.oracle.com/javase/9/docs/api/}. Bei einer solch wachsenden Anzahl an Klassen ist es wichtig sich ein Konzept auszudenken, damit der Entwickler bei der Bibliothek keine Schwierigkeiten bekommt. Wenn einzelne Punkte nicht eingehalten werden, kann der Entwickler schnell die Überblick verlieren. Der Erfolg einer Bibliothek kann unter anderem dadurch gemessen werden, wie häufig sie von Verschiedenen Entwicklern genutzt wird. In diesem Kapitel werden Punkte aufgezählt, die den Erfolg einer Bibliothek bestimmen können.
+Es gibt sehr viele Programmbibliotheken, die sehr viele Schnittstellen anbieten, auf welche die Entwickler zugriff haben. Bei einer Erweiterung der Bibliothek kommen zudem immer mehr Schnittstellen hinzu. Wo in dem \ac{JDK} aus Java 8 sich noch 4240 Klassen befinden\footnote{https://docs.oracle.com/javase/8/docs/api/}, hat dessen Nachfolger Java 9 bereits 6005 Klassen \footnote{https://docs.oracle.com/javase/9/docs/api/}. Bei einer solch wachsenden Anzahl an Klassen ist es wichtig sich ein Konzept auszudenken, damit der Entwickler bei der Bibliothek keine Schwierigkeiten bekommt. Wenn einzelne Punkte nicht eingehalten werden, kann der Entwickler schnell die Überblick verlieren. Der Erfolg einer Bibliothek kann unter anderem dadurch gemessen werden, wie häufig sie von Verschiedenen Entwicklern genutzt wird. In diesem Kapitel werden Punkte aufgezählt, die den Erfolg einer Bibliothek bestimmen können.
 
 
 \subsection{Mangelnde Dokumentation}\label{MD}
 
 Die Dokumentation einer Bibliothek beschreibt ihre Funktionalität, auf die der Entwickler zugreifen kann. So werden die Schnittstellen der Bibliothek hier definiert, sowie mit einer zusätzlichen Beschreibung versehen. Zusätzlich kann eine Dokumentation noch weitere Punkte beinhalten, wie Namens Konventionen. Ein bekanntes Beispiel hierfür ist die Java Dokumentation von Oracle. Hier werden alle Klassen auf die ein Entwickler Zugriff hat angezeigt. Neben einer Beschreibung der Klassen, gibt es in der Java API Dokumentation auch  eine Beschreibung für die Methoden einer Klasse.
 
-Für das erstellen von Dokumentation gibt es viele Möglichkeiten. Die Programmiersprache Java bietet für die Dokumentation des Quellcodes das Javadoc an \cite{oracle2017}. Bei Javadoc handelt es sich um ein Tool für das Generieren von API Dokumentation. Dabei braucht ein Entwickler z.B. über einer Methode nur ein Javadoc Kommentar zu schreiben, so dass das Javadoc Tool es in HTML code umwandeln kann. Beim Javadoc Kommentar lassen sich auch die Abhängigkeiten als Referenzen zu anderen Klassen und Methoden herstellen, das erleichtert dem Entwickler zusätzlich die Suche nach der benötigten Klassen. Die Java API Dokumentation z.B. wurde so erstellen. Folgend wird eine Methode mitsamt deren Javadoc aus der java.lang.String Klasse gezeigt:
+Für das erstellen von Dokumentation gibt es viele Möglichkeiten. Die Programmiersprache Java bietet für die Dokumentation des Quellcodes das Javadoc an \cite{oracle2017}. Bei Javadoc handelt es sich um ein Tool für das Generieren von API Dokumentation. Dabei braucht ein Entwickler z.B. über einer Methode nur ein Javadoc Kommentar zu schreiben, so dass das Javadoc Tool es in \ac{HTML} code umwandeln kann. Beim Javadoc Kommentar lassen sich auch die Abhängigkeiten als Referenzen zu anderen Klassen und Methoden herstellen, das erleichtert dem Entwickler zusätzlich die Suche nach der benötigten Klassen. Die Java API Dokumentation z.B. wurde so erstellen. Folgend wird eine Methode mitsamt deren Javadoc aus der java.lang.String Klasse gezeigt:
 
 \begin{lstlisting}[language=Java,caption=Beispiel eines Javadoc Kommentars]
 
@@ -140,9 +141,9 @@ Für das erstellen von Dokumentation gibt es viele Möglichkeiten. Die Programmi
 
 \end{lstlisting}
 
-Auch andere Bibliotheken, die in Java geschrieben worden sind, haben so ihre Dokumentation erstellt, wie die Bibliothek \ac{LWJGL}\footnote{https://javadoc.lwjgl.org/}. Das Javadoc nimmt beim erstellen des Quellcodes viel Arbeit für eine externe Dokumentation ab. 
+Auch andere Bibliotheken, die in Java geschrieben worden sind, haben so ihre Dokumentation erstellt, wie die Bibliothek \ac{LWJGL} \footnote{https://javadoc.lwjgl.org/}. Das Javadoc nimmt beim erstellen des Quellcodes viel Arbeit für eine externe Dokumentation ab. 
 
-Ein Ähnliches Tool für das erstellen für die Dokumentation ist Doxygen \cite{dimitri2017}. Doxygen steht dabei nicht nur für Java zur Verfügung, sondern auch für andere Programmiersprachen wie C, C++ oder Python. Wie in Javadoc wird auch hier die Dokumentation über Kommentare im Quelltext gesteuert, allerdings hat der Entwickler in Doxygen die Möglichkeit die Dokumentation in verschiedenen arten anzugeben\footnote{https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html}. Es ist zudem möglich mit Doxygen einen zusammenfassenden Überblick über den Aufbau des Projektes zu erzeugen. Doxygen als Erweiterung wird von vielen Entwicklungsumgebungen\ref{IDE} unterstützt. Es existiert Syntaxhervorhebung. 
+Ein Ähnliches Tool für das erstellen für die Dokumentation ist Doxygen \cite{dimitri2017}. Doxygen steht dabei nicht nur für Java zur Verfügung, sondern auch für andere Programmiersprachen wie C, C++ oder Python. Wie in Javadoc wird auch hier die Dokumentation über Kommentare im Quelltext gesteuert, allerdings hat der Entwickler in Doxygen die Möglichkeit die Dokumentation in verschiedenen arten anzugeben \footnote{https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html}. Es ist zudem möglich mit Doxygen einen zusammenfassenden Überblick über den Aufbau des Projektes zu erzeugen. Doxygen als Erweiterung wird von vielen Entwicklungsumgebungen\ref{IDE} unterstützt. Es existiert Syntaxhervorhebung. 
 
 Der Vorteil einer Dokumentation welches im Quelltext beschrieben wird, ist dass eine externe Dokumentation fehleranfälliger ist. Zudem ist die Pflege im Quelltext selber einfacher. 
 
@@ -152,7 +153,7 @@ Der Vorteil einer Dokumentation welches im Quelltext beschrieben wird, ist dass 
 Falls eine Dokumentation die API nicht gut genug Dokumentiert, so dass z.B. eine Methode nicht genau beschrieben wird wie sie intern Funktioniert, kann es dazu führen, dass ein Entwickler eine Schnittstelle der API falsch nutzt.  
 
 %Negatives Beispiele
-Die Java Klasse java.util.Calendar\footnote{https://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html} besitzt folgende Methode:
+Die Java Klasse java.util.Calendar \footnote{https://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html} besitzt folgende Methode:
 
 \begin{lstlisting}[language=Java,caption=Signatur der Methode set]
 
@@ -190,7 +191,7 @@ public static boolean Boolean.getBoolean(String name);
 
 \end{lstlisting}
 
-Sie stammt aus der Klasse java.lang.Boolean\footnote{https://docs.oracle.com/javase/9/docs/api/java/lang/Boolean.html}. In Java gibt es Wrapperklassen, die Objekte der primitiven Datentypen darstellen, wie int, double oder auch boolean. Daher gibt es jeweils für jeden Primitiven Datentyp eine Wrapperklasse, für den Datentyp int wäre es z.B. java.lang.Integer. Jede Klasse besitzt eine Methode, dessen Name mit set anfängt, so wie setInteger oder wie im Beispiel setBoolean. Es liegt nahe, dass viele Entwickler zunächst annehmen würden, das beim Aufruf der Methode getValue der Wert true geliefert wird.
+Sie stammt aus der Klasse java.lang.Boolean \footnote{https://docs.oracle.com/javase/9/docs/api/java/lang/Boolean.html}. In Java gibt es Wrapperklassen, die Objekte der primitiven Datentypen darstellen, wie int, double oder auch boolean. Daher gibt es jeweils für jeden Primitiven Datentyp eine Wrapperklasse, für den Datentyp int wäre es z.B. java.lang.Integer. Jede Klasse besitzt eine Methode, dessen Name mit set anfängt, so wie setInteger oder wie im Beispiel setBoolean. Es liegt nahe, dass viele Entwickler zunächst annehmen würden, das beim Aufruf der Methode getValue der Wert true geliefert wird.
 
 \begin{lstlisting}[language=Java,caption=Beispiel mit getValue]
 
@@ -249,6 +250,7 @@ public static boolean getValue(String str) {
 
 Diese Vorgehensweise ist irreführend, da vom Bezeichner der Methode nicht hervorgeht, dass vorher die System Propertie gesetzt werden muss.
 
+
 \subsection{Factory Pattern bedacht einsetzen}
 
 Das Factory Pattern ist ein Entwurfsmuster, welches von der Gang of Four im Buch Design Pattern beschrieben wird \cite{gamme1995}. Es wird dazu genutzt, dass der Entwickler, um eine Klasse zu instanziieren, es nicht über den Konstruktor tätigt, sondern über eine Methode. Der Entwickler soll so nicht mit dem Konstruktor in Berührung kommen. Es hat insbesondere den Vorteil, dass es so möglich ist, den Typ eines Objektes zur Laufzeit zu bestimmen.
@@ -282,11 +284,13 @@ In dem obigen Code Beispiel werden über die Klasse Factory, die Objekte für di
 Auch wenn das Factory Pattern scheinbar dem Entwickler es einfacher macht, an Objekte von einem Bestimmten Typ zu kommen, sollte das Factory Pattern nur bedacht eingesetzt werden. 
 In einer Empirischen Studie von Ellis \cite{ellis2007} wurde der Unterschied zwischen einer API die Konstruktoren nutzt und einer API die das Factory Pattern nutzt untersucht. Diese Studie kam zum schluss, dass das Factory Pattern wohl weniger geeignet ist, im gegensatz zu anderen Patterns, wie das Class Cluster Pattern. 
 
+
 \section{Ansätze zur Verbesserung allgemeiner \ac{API}s}
 
 Eine API bietet viele Möglichkeiten für eine stetige Verbesserung. Eine API, die öffentlich genutzt wird, hat meist viele Schritte zur Verbesserung durchgemacht. Die Schritte zur vermeintlichen Verbesserung einer API kann sich dabei auch über Jahre strecken. Jedoch muss das Resultat nicht zwingend in jedem Fall Positiv sein \cite[siehe Seite 25]{spichale2017}.
 \\
 Folgend werden einige Vorgehensweisen beschrieben, die Aufzeigen sollen, wie dafür gesorgt werden kann, das eine API auch eine Konsequente Verbesserung widerfährt.
+
 
 \subsection{Umdenken der Menschen}
 
@@ -295,6 +299,7 @@ Folgend werden einige Vorgehensweisen beschrieben, die Aufzeigen sollen, wie daf
 \subsection{Nutzer freundlicheres Design}
 
 --TODO-- Hier soll es eine erklärung geben, was genau die meisten Nutzer etwas als besonders benutzerfreundlich betrachten. Dabei soll auch Beispiele aufgezeigt werden, wie man sowas ermittelt
+
 
 \subsection{APIs Testen}
 
@@ -339,7 +344,7 @@ Der Name einer Methode, und damit auch die der Schnittstelle, sollte idealerweis
 Wenn sich ein Entwickler in einer neuen Bibliothek einarbeiten soll, dann gibt es mehrere Ansätze wie sich der Entwickler einarbeiten kann. Zunächst kann er dies tun, indem er die Dokumentation der Schnittstellen der Bibliothek durchgeht \ref{MD}. Nach Martin ist eine Dokumentation allerdings kein Ersatz für die Bezeichner einer Schnittstelle. Martin zufolge ist es sogar so, dass eine Schnittstellen Dokumentation ein Zeugnis davon ist, dass der Entwickler dieser Schnittstelle es nicht besser gekonnt hat. Das der Entwickler die Methode nicht genau genug benennen konnte, so dass es nicht allein durch den Namen verständlich ist. Eine Methode soll demnach möglichst sich selbst beschreiben, so dass eine Dokumentation nicht erst notwendig ist. 
 
 Nach Martin \cite[siehe Seite 51f]{martin2009} sind daher beim Design einer API für die Schnittstellen Namen zu wählen, nach denen der Entwickler einfacher suchen kann. Zudem sind auch Namen besser geeignet, die eine entsprechende Länge haben, je nach Umfang der Schnittstelle. 
-Dadurch kann der Entwickler intuitiv nach einer Methode suchen, indem er nach dem Bezeichner der Methode sucht. Einige Entwicklungsumgebungen, wie z.B. Eclipse oder Microsoft Visual Studios, beinhalten Funktionen, die unter anderem das suchen von Methoden beinhalten \footnote{http://help.eclipse.org/kepler/index.jsp Begriff: Java Search Tab}\footnote{https://blogs.msdn.microsoft.com/visualstudio/2010/01/13/searching-and-navigating-code-in-visual-studio-2010/}. Dabei ist es nicht notwendig nach dem vollen Namen der Methode zu suchen, sondern auch einzelne Wortteile. Die Entwicklungsumgebung übernimmt dann die suche und listet alle verfügbaren Methoden, die es gefunden hat.
+Dadurch kann der Entwickler intuitiv nach einer Methode suchen, indem er nach dem Bezeichner der Methode sucht. Einige Entwicklungsumgebungen, wie z.B. Eclipse oder Microsoft Visual Studios, beinhalten Funktionen, die unter anderem das suchen von Methoden beinhalten \footnote{http://help.eclipse.org/kepler/index.jsp Begriff: Java Search Tab} \footnote{https://blogs.msdn.microsoft.com/visualstudio/2010/01/13/searching-and-navigating-code-in-visual-studio-2010/}. Dabei ist es nicht notwendig nach dem vollen Namen der Methode zu suchen, sondern auch einzelne Wortteile. Die Entwicklungsumgebung übernimmt dann die suche und listet alle verfügbaren Methoden, die es gefunden hat.
 
 Folgend ist ein Bildausschnitt auf der Suchoption von Eclipse. Das danach folgende Bild ist dessen Suchergebnis.
 
@@ -393,22 +398,40 @@ Der Name der Methode
 
 Bei dem Entwickeln einer API kann es sehr langwierig sein diese zu Programmieren und zu Testen. Viele Bibliotheken haben mehrere tausende Schnittstellen, was zu sehr unübersichtlichen Code führen kann. Es gibt allerdings viele Tools, die einem das Arbeiten erleichtern. Im Folgenden werden einige Tools vorgestellt und dessen Vorteile dargestellt. 
 
+
 \subsection{Entwicklungsumgebung}\label{IDE}
 
-Es gibt sehr viele Entwicklungsumgebungen, mit dessen Hilfe Programmiert werden kann. Einer der Bekanntesten Vertreter wäre Microsoft Visual Studio\footnote{https//www.visualstudio.com/}, welches es in vielen Verschiedenen Versionen gibt, Als Kostenpflichtige Premium Edition oder als kostenlose Community Edition. Sie bietet Unterstützung für viele verschiedene Programmiersprachen, wie C, C++, C\#, Javascript oder Python.
+Es gibt sehr viele Entwicklungsumgebungen, mit dessen Hilfe Programmiert werden kann. Einer der Bekanntesten Vertreter wäre Microsoft Visual Studio \footnote{https//www.visualstudio.com/}, welches es in vielen Verschiedenen Versionen gibt, Als Kostenpflichtige Premium Edition oder als kostenlose Community Edition. Sie bietet Unterstützung für viele verschiedene Programmiersprachen, wie C, C++, C\#, Javascript oder Python.
  
 Neben der Entwicklungsumgebungen von Microsoft gibt auch noch IntelliJ von JetBrains\footnote{https://www.jetbrains.com/idea/}. Ähnlich wie Microsofts Visual Studio bietet IntelliJ Sprachunterstützung für viele verschiedene Programmiersprachen an. Auch gibt es hier ähnliche Modelle für den Entwickler, mit denen er Programmieren kann, von einer Kostenpflichtige als auch einer Kostenlosen. Im Gegensatz zu Microsoft Visual Studio ist IntelliJ auch außerhalb von Microsoft Windows Verfügbar. 
 
-Die beliebteste Entwicklungsumgebung laut \ac{PYPL} ist das in Java geschriebene Programm Eclipse von Eclipse Software\footnote{http://www.eclipse.org/}\footnote{http://www.eclipse.org/}. Auch Eclipse erlaubt mithilfe von Erweiterungen eine Sprachunterstützung von unterschiedlichen Sprachen, ursprünglich war sie dabei allerdings nur für die Programmiersprache Java Gedacht. All die genannten Entwicklungsumgebungen unterstützen das Refactoring \ref{refactorL}. 
+Die beliebteste Entwicklungsumgebung laut \ac{PYPL} ist das in Java geschriebene Programm Eclipse von Eclipse Software \footnote{http://www.eclipse.org/} \footnote{http://www.eclipse.org/}. Auch Eclipse erlaubt mithilfe von Erweiterungen eine Sprachunterstützung von unterschiedlichen Sprachen, ursprünglich war sie dabei allerdings nur für die Programmiersprache Java Gedacht. All die genannten Entwicklungsumgebungen unterstützen das Refactoring \ref{refactorL}. 
 
 Entwicklungsumgebungen sind eine große Hilfe beim Entwickeln und verbessern einer API. Da die Entwickler meist über eine Entwicklungsumgebung auf eine API zugreifen, kann man leicht nachverfolgen, wie die natürliche Arbeitsweise eines Entwicklers ist der diese API nutzt. 
 
 In vielen Entwicklungsumgebungen haben die Entwickler die Möglichkeit die Texteingabe Automatisch zu vervollständigen. So werden zum Beispiel bei der Eingabe von get in Eclipse mithilfe von den Tasten STRG und LEERTASTE unter anderem sämtliche Methoden aufgelistet, auf die der Entwickler Zugreifen kann. So hat der Entwickler jederzeit die Möglichkeit nach einer Methode zu suchen, die sein aktuelles Problem lösen kann. Dies hat den Vorteil, dass so überprüft werden kann, wie der natürliche verlauf von vielen Entwickler beim Entwickeln ist und wie die Entwickler mit einer API zurechtkommt. 
 
+
 \subsection{Das Programm Checkstyle}
 
-Nach fortschreitender Entwicklungszeit einer API kann es immer wieder mal zu nicht Konvention Gerechter Benennung der Schnittstellen kommen. Das kann nach Veröffentlichung der Schnittstelle dazu führen, dass die API es den Entwicklern erschwert, nach einer Schnittstelle zu suchen, die ihr Problem lösen könnte. Was wiederum dazu führen könnte, dass sie die Probleme selbst versuchen zu lösen, und es so zu unsauberen Code kommen kann
-\footnote{http://checkstyle.sourceforge.net/}
+Nach fortschreitender Entwicklungszeit einer API kann es immer wieder mal zu nicht Konvention Gerechter Benennung der Schnittstellen kommen. Das kann nach Veröffentlichung der Schnittstelle dazu führen, dass die API es den Entwicklern erschwert, nach einer Schnittstelle zu suchen, die ihr Problem lösen könnte. Was wiederum dazu führen könnte, dass sie die Probleme selbst versuchen zu lösen, und es so zu undurchschaubaren Code kommen kann \footnote{http://checkstyle.sourceforge.net/}. 
+
+Mithilfe von Checkstyle lässt sich der Quellcode automatisiert analysieren, um so die Konvention einzuhalten. Was genau alles überprüft wird und wie, wird in einer \ac{XML} Datei festgelegt. 
+
+\begin{lstlisting}[language=Java,caption=Auszug einer XML Datei]
+
+[...]
+<module name="Checker">
+    <module name="JavadocPackage"/>
+    <module name="TreeWalker">
+        <module name="AvoidStarImport"/>
+        <module name="ConstantName"/>
+        <module name="EmptyBlock"/>
+    </module>
+</module>
+[...]
+
+\end{lstlisting}
 
 
 \section{Fazit}
@@ -422,11 +445,14 @@ Hier soll es nochmal einen Bezug auf die vorherigen Loesungsbeispielen geben und
 
 \begin{acronym}
 \acro{API}{\ Application Programming Interface}
-\acro{SDK}{\ Software Development Kit}
+\acro{HTML}{\ Hypertext Markup Language}
 \acro{JDK}{\ Java Development Kit}
-\acro{STL}{\ Standard Template Library}
 \acro{LWJGL}{\ Lightweight Java Game Library}
 \acro{PYPL}{\ PopularitY of Programming Language}
+\acro{SDK}{\ Software Development Kit}
+\acro{STL}{\ Standard Template Library}
+\acro{XML}{\ Extensible Markup Language}
+
 \end{acronym}
 
 % Literaturverzeichnis
