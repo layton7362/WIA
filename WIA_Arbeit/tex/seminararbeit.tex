@@ -288,22 +288,35 @@ In einer Empirischen Studie von Ellis \cite{ellis2007} wurde der Unterschied zwi
 \section{Ansätze zur Verbesserung allgemeiner \ac{API}s}
 
 Eine API bietet viele Möglichkeiten für eine stetige Verbesserung. Eine API, die öffentlich genutzt wird, hat meist viele Schritte zur Verbesserung durchgemacht. Die Schritte zur vermeintlichen Verbesserung einer API kann sich dabei auch über Jahre strecken. Jedoch muss das Resultat nicht zwingend in jedem Fall Positiv sein \cite[siehe Seite 25]{spichale2017}.
-\\
+
 Folgend werden einige Vorgehensweisen beschrieben, die Aufzeigen sollen, wie dafür gesorgt werden kann, das eine API auch eine Konsequente Verbesserung widerfährt.
 
 
-\subsection{Umdenken der Menschen}
-
---TODO-- Hier soll es einen Ansatz geben, der sich damit befasst, dass man die usability einer API nicht unterschätzen sollte. Viele nehmen das nicht ernst und entwickeln nicht sorgfältig genug. 
-
 \subsection{Nutzer freundlicheres Design}
 
---TODO-- Hier soll es eine erklärung geben, was genau die meisten Nutzer etwas als besonders benutzerfreundlich betrachten. Dabei soll auch Beispiele aufgezeigt werden, wie man sowas ermittelt
+Viele Entwickler, die mit keine Benutzerfreundliche API arbeiten, können große Probleme haben diese API zu erlernen. Nach Robillards Untersuchung haben die Entwickler folgendes angegeben \cite{robillard2009}:
+\begin{itemize}
+\item 78 Prozent gaben an, eine API durch ihre Dokumentation zu lernen.
+\\
+\item 55 Prozent gaben an, eine API durch Code Beispiele zu lernen
+\\
+\item 34 Prozent gaben an, eine API zu lernen, indem sie damit herum experimentieren, um 			so ein die Funktionsweise zu verstehen.
+\\
+\item 30 Prozent gaben an, dass sie sich von ihren Kollegen einweisen lassen.
+\\
+\item 29 Prozent gaben an, dass sie sich Artikel zu den API durchlesen
+\end{itemize}
 
+Anhand der Ergebnisse sieht man ziemlich gut, wie wichtig eine Dokumentation für die Entwickler ist. Mehr als drei Viertel geben an, dass sie sich erst in die Dokumentation einlesen, bevor sie mit der API Programmieren. Daher kann es essentiell sein, mit der API auch eine gute Dokumentation zu haben. Mehr als ein Drittel geben an, eine API zu lernen indem sie mit dessen Schnittstellen herum experimentieren. Daraus ist zu entnehmen, dass ein verständliches Design der Schnittstellen für viele Entwickler das Mittel ist, um diese API zu lernen. 
+
+Zudem gaben die Testpersonen an, dass für sie auch wichtig sei, dass die Dokumentation einige gute Beispiele beinhalten soll. So z.B. Komplexere Szenarien, die mit Code Beispielen untermauert werden. Auch eine Strukturierte Ordnung sei wichtig. 
 
 \subsection{APIs Testen}
 
---TODO--
+Um die Qualität einer API zu verbessern, ist es sinnvoll die API vorher zu Testen. Neben den Unit-Tests \footnote{https://martinfowler.com/bliki/UnitTest.html}, gibt es auch Testmöglichkeiten, bei denen es von einem Menschlichen Auge getestet wird. Der Zweck von diesen Tests ist es, die Benutzerfreundlichkeit der Tests zu erhöhen. 
+
+Es bieten sich für Menschliche Tests einige Möglichkeiten an. Eines davon ist das Peer-Reivew um die Benutzerfreundlichkeit zu bewerten \cite{farooq2010}. Das Ziel einer API Peer Review ist es, Rückmeldung zu erhalten, wie stark die Benutzerfreundlichkeit der API ist.  
+
 
 \section{Ausgewählte \ac{API} Entwurfs Beispiele}
 
@@ -351,21 +364,18 @@ Folgend ist ein Bildausschnitt auf der Suchoption von Eclipse. Das danach folgen
 % Grafik in einer Spalte
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=8.5cm]{eclipse_suche.png}
+\includegraphics[width=8cm]{eclipse_suche.png}
 \caption{Suchoption aus Eclipse}
 \label{fig_sim}
 \end{figure}
 
-
-
 % Grafik in einer Spalte
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=8.5cm]{eclispe_suche_ergebniss.png}
+\includegraphics[width=8cm]{eclispe_suche_ergebniss.png}
 \caption{Suchergebnis aus Eclipse}
 \label{fig_sim}
 \end{figure}
-
 
 Daher ist für den Entwickler einfacher sich in einer API zurecht zu finden, wenn dessen Schnittstellen eine gewisse Konvention folgen \cite{haase2015}. 
 
@@ -383,17 +393,35 @@ Auch wenn ein gutes Design der API vorliegen sollte, kann es bei zusätzlichen E
 
 Das Refactoring kann dazu genutzt werden, solche vorhandene Missstände auszubessern und den Quellcode leserlicher und für den Entwickler, der diese API nutzt, den Stress zu lindern. 
  
-Als Beispiel soll folgende,sehr simple gehaltene, Schnittstelle dienen.
+Als Beispiel soll folgende, sehr simple gehaltene, Schnittstelle dienen. Der Name ist hierbei absichtlich nichtssagend, damit das Beispiel besser nachzuvollziehen ist.
  
 \begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
 
-public void foo(int[] a, int[] b);
+public int[] fusion(int[] a, int[] b);
 
 \end{lstlisting}
 
-Der Name der Methode 
+Die Methode soll Zwei Arrays miteinander Kombinieren. Das Array mit dem Namen b soll an a angehängt werden. Das Kombinierte Array wird dann zurückgegeben. Der Name der Methode lautet fusion und bekommt Zwei Arrays mit den nichtssagenden Namen a und b. Es lässt sich nicht Eindeutig sagen, was diese Methode genau bewirkt. 
 
---TODO--
+Mithilfe von Refactoring lässt sich diese Methode nun so abändern, dass sie, falls sie in anderen, internen Methoden innerhalb der Bibliothek, welches diese API implementiert, mit geändert wird. Bei dem Namen fusion kann es zu einem Missverständnis beim Entwickler kommen. So ist es möglich, dass der Entwickler annimmt, dass der Inhalt beider Arrays jeweils miteinander addiert werden. 
+
+Der Name der Methode kann mithilfe von Refactoring abgeändert werden, unabhängig von der Funktionsweise der Methode. Es wäre also Möglich die Methode folgenderweise zu Benennen:
+
+\begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
+
+public int[] combine(int[] a, int[] b);
+
+\end{lstlisting}
+
+Mit dem Namen wäre diese Methode nun deutlich lesbarer für den Entwickler, welcher diese API nutzt. Allerdings könne es aufgrund der Namen der Parameter zu Unsicherheit kommen. Es ist nicht klar ersichtlich, ob b an a angehängt wird oder andersherum. Daher wäre es dann Refactoring möglich beide Parameter so umzubenennen, dass ihr Name ihre Rolle klar hervorheben. Auch hier wäre es nicht notwendig, in der Implementierung die Namen anzupassen:
+
+\begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
+
+public int[] combine(int[] head, int[]tail);
+
+\end{lstlisting}
+
+
 \section{Tools zur Unterstützung der Entwicklung einer API}
 
 Bei dem Entwickeln einer API kann es sehr langwierig sein diese zu Programmieren und zu Testen. Viele Bibliotheken haben mehrere tausende Schnittstellen, was zu sehr unübersichtlichen Code führen kann. Es gibt allerdings viele Tools, die einem das Arbeiten erleichtern. Im Folgenden werden einige Tools vorgestellt und dessen Vorteile dargestellt. 
@@ -433,6 +461,7 @@ Mithilfe von Checkstyle lässt sich der Quellcode automatisiert analysieren, um 
 
 \end{lstlisting}
 
+Durch Checkstyle lässt sich so sehr viel Zeit sparen, die sonst in der pflege des Quellcodes investiert werden müsste. Das Resultat wird wiederum in eine XML Datei gespeichert. Zudem wird nach dem analysieren auch noch eine \ac{HTML} Datei erzeugt, in dem sich das Resultat übersichtlich anschauen lässt.  
 
 \section{Fazit}
 
