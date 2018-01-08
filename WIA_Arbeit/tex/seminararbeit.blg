@@ -1,21 +1,18 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
 [0] Config.pm:343> INFO - Logfile is 'seminararbeit.blg'
-[65] biber:287> INFO - === Fr Dez  8, 2017, 17:14:52
-[178] Biber.pm:348> INFO - Reading 'seminararbeit.bcf'
-[348] Biber.pm:742> INFO - Found 9 citekeys in bib section 0
-[357] Biber.pm:3151> INFO - Processing section 0
-[395] Biber.pm:3308> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[417] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
-[431] bibtex.pm:974> INFO - Found BibTeX data source 'literatur.bib'
-[448] Utils.pm:147> WARN - Overwriting field 'year' with year value from field 'date' for entry 'bloch2014'
-[515] Utils.pm:147> WARN - Datamodel: Entry 'bloch2009' (literatur.bib): Invalid format '2017-12-5' of date field 'date' - ignoring
-[523] Utils.pm:147> WARN - BibTeX subsystem: /tmp/jce4c9k5GG/literatur.bib_10334.utf8, line 139, warning: 2 characters of junk seen at toplevel
-[524] Utils.pm:147> WARN - BibTeX subsystem: /tmp/jce4c9k5GG/literatur.bib_10334.utf8, line 136, warning: undefined macro "http://www.stack.nl/~dimitri/doxygen/index.html"
-[524] Utils.pm:147> WARN - The field 'url' in entry 'dimitri2017' cannot be null, deleting it
-[613] UCollate.pm:65> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[613] UCollate.pm:65> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[613] Biber.pm:3028> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'de-DE'
-[613] Biber.pm:3032> INFO - No sort tailoring available for locale 'de-DE'
-[627] bbl.pm:519> INFO - Writing 'seminararbeit.bbl' with encoding 'UTF-8'
-[653] bbl.pm:615> INFO - Output to seminararbeit.bbl
-[653] Biber.pm:109> INFO - WARNINGS: 5
+[44] biber:287> INFO - === So Jan  7, 2018, 16:47:20
+[151] Biber.pm:348> INFO - Reading 'seminararbeit.bcf'
+[320] Biber.pm:742> INFO - Found 15 citekeys in bib section 0
+[326] Biber.pm:3151> INFO - Processing section 0
+[359] Biber.pm:3308> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[397] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[430] bibtex.pm:974> INFO - Found BibTeX data source 'literatur.bib'
+[471] Utils.pm:147> WARN - Overwriting field 'year' with year value from field 'date' for entry 'bloch2014'
+[517] Utils.pm:147> WARN - Datamodel: Entry 'bloch2009' (literatur.bib): Invalid format '2017-12-5' of date field 'date' - ignoring
+[730] UCollate.pm:65> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[730] UCollate.pm:65> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[730] Biber.pm:3028> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'de-DE'
+[731] Biber.pm:3032> INFO - No sort tailoring available for locale 'de-DE'
+[758] bbl.pm:519> INFO - Writing 'seminararbeit.bbl' with encoding 'UTF-8'
+[811] bbl.pm:615> INFO - Output to seminararbeit.bbl
+[812] Biber.pm:109> INFO - WARNINGS: 2

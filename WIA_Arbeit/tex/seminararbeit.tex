@@ -326,8 +326,8 @@ Folgend werden einige Entwurfsbeispiele für eine API aufgezählt.
 
 \subsection{Sinnvolle Klassennamen wählen}
 
-In Programmiersprachen die Objektorientiert sind, wie Java oder C++, sind die Namen der Klassen ebenso Relevant wie die Methodennamen. In reine Objektorientierte Sprache ist es umso wichtiger, da die Objekte alle Schnittstellen nach außen anbieten, auf die dann der Nutzer dieser API zugriff hat. Zudem sind viele Objekte, ob durch Vererbung oder weil bei einer Methode als Parameter erwartet, miteinander Verbunden. 
-Der Name einer Klasse sollte ein Substantiv sein \cite{martin2009}. Es sollte zudem mit einem großen Buchstaben anfangen. Einige Beispiele für gute Klassennamen wären:
+In objektorientierte Programmiersprachen, wie Java oder C++, sind die Namen der Klassen ebenso relevant, wie die Methodennamen. Ein wesentlicher Grund dafür ist, dass hierbei die Objekte Schnittstellen nach außen anbieten, auf die dann der Nutzer dieser API Zugriff hat. Zudem sind viele Objekte, sei es durch Vererbung oder durch eine Parameterübergabe an eine Methode, miteinander Verbunden. 
+Der Name einer Klasse sollte ein Substantiv sein \cite{martin2009}. Er sollte zudem mit einem großen Buchstaben anfangen. Einige Beispiele für gute Klassennamen wären:
 
 \begin{lstlisting}[language=Java,caption= Klassennamen]
 
@@ -341,20 +341,20 @@ public class Number{...}
 
 \end{lstlisting}
 
-Durch das Verwenden eines Substantivs in einem Klassennamen wird es dem Nutzer einfacher nach einer Schnittstelle zu suchen, die sich in einer naheliegenden Klasse befindet.
-Ein Guter Klassenname bezieht sich immer auf den Typen den diese Klasse darstellen soll. Daher sollte der Klassenname nicht von der technischen Implementierung abhängig sein. 
+Das Verwenden eines Substantivs in einem Klassennamen vereinfacht für den Nutzer die Suche nach einer Schnittstelle, die sich in einer naheliegenden Klasse befindet.
+Ein guter Klassenname bezieht sich immer auf den Typen, den diese Klasse darstellen soll. Daher sollte der Klassenname nicht von der technischen Implementierung abhängig sein. 
 
 
 \subsection{Methodennamen und ihre Parameter}\label{MNP}
 
-Der Name einer Methode, und damit auch die der Schnittstelle, sollte idealerweise ihren Zweck beschreiben. Einen passenden Namen für eine Methode zu wählen kann viel Zeit kosten, allerdings erleichtert es dem Entwickler, der diese API nutzt, die ansonsten zeitaufwendige Suche nach einer passenden Methode \cite[siehe Seite 45f]{martin2009}.
+Der Name einer Methode, und damit auch die der Schnittstelle, sollte idealerweise ihren Zweck beschreiben. Einen passenden Namen für eine Methode zu wählen, kann viel Zeit kosten, allerdings erleichtert es dem Anwender, die ansonsten zeitaufwendige Suche nach einer passenden Methode \cite[siehe Seite 45f]{martin2009}.
 
-Wenn sich ein Entwickler in einer neuen Bibliothek einarbeiten soll, dann gibt es mehrere Ansätze, wie sich der Entwickler einarbeiten kann. Zunächst kann er dies tun, indem er die Dokumentation der Schnittstellen der Bibliothek durchgeht \ref{MD}. Nach Martin ist eine Dokumentation allerdings kein Ersatz für die Bezeichner einer Schnittstelle. Martin zufolge ist es sogar so, dass eine Schnittstellen Dokumentation ein Zeugnis davon ist, dass der Entwickler dieser Schnittstelle nicht fähig genug war, einen besseren Namen zu verwenden. Das der Entwickler dieser Schnittstelle, sie nicht genau genug benennen konnte, so dass es nicht allein durch den Namen verständlich ist. Eine Schnittstelle soll demnach möglichst sich selbst beschreiben, so dass eine Dokumentation nicht erst notwendig ist. 
+Wenn sich ein Entwickler in eine neue Bibliothek einarbeiten soll, dann gibt es hierfür verschiedene Ansätze. Ein erster Ansatz wäre, dass er die Dokumentation der Schnittstellen der Bibliothek durchgeht \ref{MD}. Nach Martin ist eine Dokumentation allerdings kein Ersatz für die Bezeichner einer Schnittstelle. Martin zufolge ist es sogar so, dass eine Schnittstellen-Dokumentation ein Zeugnis dafür, dass der Entwickler dieser Schnittstelle nicht imstande war, bessere und selbsterklärendere Methodennamen zu verwenden. Das Resultat dieser Aussage ist, dass eine Schnittstelle sich demnach selbst beschreiben soll, sodass eine Dokumentation nicht erst notwendig ist. 
 
-Nach Martin \cite[siehe Seite 51f]{martin2009} sind daher beim Design einer API, für die Schnittstellen Namen zu wählen, nach denen der Nutzer einfacher suchen kann. Zudem sind auch Namen besser geeignet, die eine entsprechende Länge haben, je nach Umfang der Schnittstelle. 
-Dadurch kann der Entwickler intuitiv nach einer Methode suchen, indem er nach dem Bezeichner der Methode sucht. Einige Entwicklungsumgebungen, wie z. B. Eclipse oder Microsoft Visual Studios, beinhalten Funktionen, die unter anderem das suchen von Methoden beinhalten \footnote{http://help.eclipse.org/kepler/index.jsp Begriff: Java Search Tab} \footnote{https://blogs.msdn.microsoft.com/visualstudio/2010/01/13/searching-and-navigating-code-in-visual-studio-2010/}. Dabei ist es nicht notwendig nach dem vollen Namen der Methode zu suchen, es genügen auch einzelne Wortteile. Die Entwicklungsumgebung übernimmt dann die suche und listet alle verfügbaren Methoden auf, die dieses Wortteil beinhalten.
+Nach Martin \cite[siehe Seite 51f]{martin2009} ist daher beim Design einer API, für die Schnittstellen Namen zu wählen, nach denen der Nutzer einfacher suchen kann. Zudem sind auch Namen besser geeignet, die je nach Umfang der Schnittstelle eine entsprechende Länge haben. 
+Dadurch kann der Entwickler intuitiv nach einer Methode suchen, indem er nach dem Bezeichner der Methode sucht. Einige Entwicklungsumgebungen, wie z. B. Eclipse oder Microsoft Visual Studios, beinhalten Funktionen, die unter anderem das Suchen von Methoden beinhalten \footnote{http://help.eclipse.org/kepler/index.jsp Begriff: Java Search Tab} \footnote{https://blogs.msdn.microsoft.com/visualstudio/2010/01/13/searching-and-navigating-code-in-visual-studio-2010/}. Dabei ist es nicht notwendig nach dem vollen Namen der Methode zu suchen, es genügen auch einzelne Wortteile. Die Entwicklungsumgebung übernimmt dann die Suche und listet alle verfügbaren Methoden auf, die dieses Wortteil beinhalten.
 
-Folgend ist ein Bildausschnitt auf der Suchoption von Eclipse. Das danach folgende Bild ist dessen Suchergebnis.
+Die folgende Abbildung zeigt einen Bildausschnitt aus der Suchoption von Eclipse. Das danach folgende Bild ist dessen Suchergebnis.
 
 \begin{figure}[!ht]
 \centering
@@ -371,7 +371,7 @@ Folgend ist ein Bildausschnitt auf der Suchoption von Eclipse. Das danach folgen
 \label{fig_sim}
 \end{figure}
 
-Daher ist es einfacher für den Nutzer sich in einer API zurechtzufinden, wenn dessen Schnittstellen eine gewisse Konvention folgen \cite{haase2015}. Sobald sich ein Nutzer in einer API eingearbeitet hat, entwickelt der Nutzer eine gewisse Routine. \cite[siehe Seite 14f]{martin2009}. 
+Daher ist es einfacher für den Nutzer sich in einer API zurechtzufinden, wenn dessen Schnittstellen einer gewissen Konvention folgen \cite{haase2015}. Sobald sich ein Nutzer in eine API eingearbeitet hat, entwickelt er eine gewisse Routine. \cite[siehe Seite 14f]{martin2009}. 
 
 
 
@@ -383,11 +383,11 @@ Hier soll es aufzeigen, wieso man nicht für alles eine Methode schreiben sollte
 
 \subsection{Refactoring}\label{refactorL}
 
-Das Refactoring beschreibt laut Fowler einen Prozess, bei dem bestehender Quellcode so verändern wird, dass es keinen Einfluss auf die eigentliche Funktion hat. \cite{fowler1999}. Mit dem Refactoring wird versucht, bestehenden Quellcode so zu verbessern, dass die Chancen minimiert werden, dass an einigen Stellen Programmfehler auftreten können. Zudem wird meist zusätzlich auch der Quellcode verbessert, sodass es besser lesbar und somit wartbar ist. Nach Fowler ist das Refactoring keine zusätzliche Arbeit, sondern ein fester Bestandteil bei der Software Entwicklung.
+Das Refactoring beschreibt laut Fowler einen Prozess, bei dem bestehender Quellcode so verändert wird, dass die Änderung keinen Einfluss auf die eigentliche Funktion hat. \cite{fowler1999}. Mit dem Refactoring wird versucht bestehenden Quellcode so zu verbessern, dass die Chancen für mögliche Programmfehler minimiert werden. Zudem wird meist zusätzlich auch der Quellcode verbessert, sodass es besser lesbar und somit wartbar ist. Nach Fowler ist das Refactoring keine zusätzliche Arbeit, sondern ein fester Bestandteil bei der Software-Entwicklung.
 
-Auch wenn ein gutes Design der API vorliegen sollte, kann es bei zusätzlichen Erweiterungen dazu kommen, dass die Schnittstellen nicht mehr nach dem ursprünglichen Design entworfen worden sind. So könnte eine Namenskonvention nicht eingehalten worden sein \ref{MNP}. Es kann auch vorkommen, dass die Namen der Parameter einer Methode nicht aussagekräftig genug sind und dies für den Nutzer zur Verwirrung führen könnte. Falls die API noch nicht veröffentlicht wurde, ist es zudem auch möglich die Schnittstellen selber in den Refactoring Prozess einzubinden und sie zu verändern.
+Auch wenn ein gutes Design der API vorliegen sollte, kann es bei zusätzlichen Erweiterungen dazu kommen, dass die Schnittstellen nicht mehr nach dem ursprünglichen Design entworfen worden sind. Dies könnte dazu führen, dass eine Namenskonventionen nicht eingehalten worden sind \ref{MNP}. Es kann auch vorkommen, dass die Parameternamen einer Methode nicht aussagekräftig genug sind und dies für den Nutzer zur Verwirrung führen könnte. Falls die API noch nicht veröffentlicht wurde, ist es zudem auch möglich die Schnittstellen selber in den Refactoring Prozess einzubinden und sie zu verändern.
 
-Das Refactoring kann dazu genutzt werden, solche vorhandene Missstände auszubessern und den Quellcode leserlicher zu machen. Zudem kann es auch den Stress für den Nutzer dieser API lindern. 
+Das Refactoring kann dazu genutzt werden, solche Missstände auszubessern und den Quellcode leserlicher zu machen. Zudem kann es auch den Stress für den Nutzer dieser API minimieren. 
  
 Als Beispiel soll folgende, sehr simple gehaltene, Schnittstelle dienen:
  
@@ -399,9 +399,9 @@ public int[] fusion(int[] a, int[] b);
 
 Die Methode soll zwei Arrays miteinander kombinieren. Das Array mit dem Namen b soll an a angehängt werden. Das kombinierte Array wird dann zurückgegeben. Der Name der Methode lautet fusion und bekommt zwei Arrays mit den nichtssagenden Namen a und b. Es lässt sich nicht eindeutig sagen, was diese Methode genau bewirkt. 
 
-Mithilfe von Refactoring lässt sich diese Methode so abändern, dass auch alle weitere vorkommenden dieser Methode mit geändert werden. Bei dem Namen fusion kann es zu einem Missverständnis beim Entwickler kommen. So ist es möglich, dass der Entwickler annimmt, dass der Inhalt beider Arrays jeweils miteinander addiert werden. 
+Mithilfe von Refactoring lässt sich diese Methode so abändern, dass auch alle weiteren vorkommenden dieser Methode angepasst werden. Bei dem Namen fusion kann es zu einem Missverständnis beim Entwickler kommen. So ist es möglich, dass der Entwickler annimmt, dass der Inhalt beider Arrays jeweils miteinander addiert wird. 
 
-Der Name der Methode kann mithilfe von Refactoring abgeändert werden, unabhängig von der Funktionsweise der Methode. Es wäre also möglich die Methode folgenderweise zu benennen:
+Der Name der Methode kann mithilfe von Refactoring abgeändert werden, unabhängig von der Funktionsweise der Methode. Es wäre also möglich die Methode folgendermaßen zu benennen:
 
 \begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
 
@@ -409,7 +409,7 @@ public int[] combine(int[] a, int[] b);
 
 \end{lstlisting}
 
-Mit dem Namen wäre diese Methode nun deutlich lesbarer für den Nutzer dieser API. Allerdings könne es aufgrund der Namen der Parameter zu Unsicherheit kommen. Es ist nicht klar ersichtlich, ob b an a angehängt wird oder andersherum. Es wäre mithilfe von Refactoring möglich beide Parameter so umzubenennen, sodass ihre Namen ihre Rolle klar hervorheben. Auch hier wäre es nicht notwendig, in der Implementierung die Namen anzupassen:
+Mit dem Namen wäre diese Methode nun deutlich lesbarer für den Nutzer dieser API. Allerdings könnte es aufgrund der Parameterbenennung zu Unklarheiten kommen. Es ist nicht eindeutig ersichtlich, ob b an a angehängt wird oder andersherum. Es wäre mithilfe von Refactoring möglich beide Parameter so umzubenennen, sodass ihre Namen ihre Rolle klar hervorheben. Auch hier wäre es nicht notwendig, in der Implementierung die Namen anzupassen:
 
 \begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
 
@@ -420,25 +420,25 @@ public int[] combine(int[] head, int[]tail);
 
 \section{Tools zur Unterstützung der Entwicklung einer API}
 
-Bei dem Entwickeln einer API kann es sehr langwierig sein diese zu programmieren und zu testen. Viele Bibliotheken haben mehrere tausende Schnittstellen, was zu sehr unübersichtlichen Quellcode führen kann. Es gibt allerdings viele Tools, die einem das Arbeiten erleichtern. Im Folgenden werden einige Tools vorgestellt und dessen Vorteile dargestellt. 
+Das Programmieren und Testen können die Entwicklung einer API sehr langwierig machen. Viele Bibliotheken haben mehrere tausende Schnittstellen, was zu sehr unübersichtlichen Quellcode führen kann. Es gibt allerdings viele Tools, die einem das Arbeiten erleichtern. Im Folgenden werden einige Tools vorgestellt und deren Vorteile dargestellt. 
 
 
 \subsection{Entwicklungsumgebung}\label{IDE}
 
-Es gibt sehr viele Entwicklungsumgebungen, mit dessen Hilfe das Programmieren erleichtert wird. Einer der Bekanntesten Vertreter wäre Microsoft Visual Studio \footnote{https//www.visualstudio.com/}, welches es in vielen verschiedenen Versionen gibt, als kostenpflichtige premium Edition oder als kostenlose Community Edition. Sie bietet Unterstützung für viele verschiedene Programmiersprachen, wie C, C++, C\#, Javascript oder Python.
+Es gibt sehr viele Entwicklungsumgebungen, mit deren Hilfe das Programmieren erleichtert wird. Einer der bekanntesten Vertreter wäre Microsoft Visual Studio \footnote{https//www.visualstudio.com/}. Microsoft bietet mehrere Versionen seiner Entwicklungsumgebung Visual Studio, zum einen als kostenpflichtige Premium Edition und zum anderen als kostenlose Community Edition. Sie bietet Unterstützung für viele verschiedene Programmiersprachen, wie C, C++, C\#, Javascript oder Python.
  
-Neben der Entwicklungsumgebung von Microsoft gibt auch noch IntelliJ von JetBrains  \footnote{https://www.jetbrains.com/idea/}. Ähnlich wie Microsofts Visual Studio bietet IntelliJ Sprachunterstützung für viele verschiedene Programmiersprachen an. Auch gibt es hier ähnliche Modelle für den Entwickler, mit denen er programmieren kann, von einer kostenpflichtige als auch einer kostenlosen. Im Gegensatz zu Microsoft Visual Studio ist IntelliJ auch außerhalb von Microsoft Windows verfügbar. 
+Neben der Entwicklungsumgebung von Microsoft gibt es auch noch IntelliJ von JetBrains  \footnote{https://www.jetbrains.com/idea/}. Ähnlich wie Microsofts Visual Studio bietet IntelliJ Sprachunterstützung für viele verschiedene Programmiersprachen an. Auch gibt es hier sowohl eine kostenpflichtige als auch eine Community Version. Im Gegensatz zu Microsoft Visual Studio ist IntelliJ auch außerhalb von Microsoft Windows verfügbar. 
 
 Die beliebteste Entwicklungsumgebung laut \ac{PYPL} ist das in Java geschriebene Programm Eclipse von Eclipse Software \footnote{http://www.eclipse.org/} \footnote{http://www.eclipse.org/}. Auch Eclipse erlaubt mithilfe von Erweiterungen eine Sprachunterstützung von unterschiedlichen Sprachen, ursprünglich war sie dabei allerdings nur für die Programmiersprache Java gedacht. All die genannten Entwicklungsumgebungen unterstützen das Refactoring \ref{refactorL}. 
 
-Entwicklungsumgebungen sind eine große Hilfe beim Entwickeln und verbessern einer API. Da die Entwickler meist über eine Entwicklungsumgebung auf eine API zugreifen, kann man leicht nachverfolgen, wie die natürliche Arbeitsweise eines Entwicklers ist. der diese API nutzt. 
+Entwicklungsumgebungen sind eine große Hilfe beim Entwickeln und Verbessern einer API. Da die Entwickler meist über eine Entwicklungsumgebung auf eine API zugreifen, kann man leicht nachverfolgen, wie die natürliche Arbeitsweise eines Entwicklers ist.
 
-In vielen Entwicklungsumgebungen haben die Entwickler die Möglichkeit die Texteingabe automatisch zu vervollständigen. So werden zum Beispiel bei der Eingabe von get in Eclipse mithilfe von den Tasten STRG und LEERTASTE unter anderem sämtliche Methoden aufgelistet, auf die der Entwickler Zugreifen kann. So hat der Entwickler jederzeit die Möglichkeit nach einer Methode zu suchen, die sein aktuelles Problem lösen kann. Dies hat den Vorteil, dass so überprüft werden kann, wie der natürliche Verlauf von vielen Entwicklern beim Entwickeln ist und wie ein Entwickler mit einer API zurechtkommt. 
+In vielen Entwicklungsumgebungen haben die Entwickler die Möglichkeit die Texteingabe automatisch zu vervollständigen. So werden zum Beispiel bei der Eingabe von get in Eclipse mithilfe von den Tasten STRG und LEERTASTE unter anderem sämtliche Methoden aufgelistet, auf die der Entwickler Zugreifen kann. So hat der Entwickler jederzeit die Möglichkeit nach einer Methode zu suchen, die sein aktuelles Problem lösen kann. Dies hat den Vorteil, dass so überprüft werden kann, wie ein Entwickler beim Programmieren vorgeht und wie gut er mit einer API zurechtkommt. 
 
 
 \subsection{Das Programm Checkstyle}
 
-Nach fortschreitender Entwicklungszeit einer API kann es immer wieder mal zu nicht Konvention gerechter Benennung der Schnittstellen kommen. Das kann nach Veröffentlichung der Schnittstelle dazu führen, dass die API es den Nutzern erschwert, nach einer Schnittstelle zu suchen, die ihr Problem lösen könnte. Was wiederum dazu führen könnte, dass die Nutzer die Probleme selbst versuchen zu lösen, und es so zu undurchschaubaren Quellcode kommen kann \footnote{http://checkstyle.sourceforge.net/}. 
+Nach fortschreitender Entwicklungszeit einer API kann es immer wieder zu nicht konventionsgemäßer Benennung der Schnittstellen kommen. Das kann nach Veröffentlichung der Schnittstelle dazu führen, dass die API es den Nutzern erschwert, nach einer Schnittstelle zu suchen, die ihr Problem lösen könnte. Was wiederum dazu führen könnte, dass die Nutzer versuchen die Probleme selbst zu lösen, und es so zu undurchschaubaren Quellcode kommen könnte \footnote{http://checkstyle.sourceforge.net/}. 
 
 Mithilfe von Checkstyle lässt sich der Quellcode automatisiert analysieren, um so die Konvention einzuhalten. Was genau alles überprüft wird und wie, wird in einer \ac{XML} Datei festgelegt. 
 
@@ -457,13 +457,17 @@ Mithilfe von Checkstyle lässt sich der Quellcode automatisiert analysieren, um 
 
 \end{lstlisting}
 
-Durch Checkstyle lässt sich so sehr viel Zeit sparen, die sonst in der Pflege des Quellcodes investiert werden müsste. Das Resultat wird wiederum in einer XML Datei gespeichert. Zudem wird, nach dem analysieren, auch noch eine \ac{HTML} Datei erzeugt, in dem sich das Resultat übersichtlich anschauen lässt.  
+Durch Checkstyle lässt sich sehr viel Zeit sparen, die sonst in die Pflege des Quellcodes investiert werden müsste. Das Ergebnis wird wiederum in einer XML Datei gespeichert. Zudem wird nach dem Analysieren noch eine \ac{HTML} Datei erzeugt, in dem sich das Ergebnis übersichtlich anschauen lässt.  
 
 \section{Fazit}
 --TODO-- Noch zu bearbeiten
 
 
 %% --------------------------------------------------------------------
+
+\lstlistoflistings
+
+\listoffigures
 
 \section*{Abkürzungen}
 \addcontentsline{toc}{section}{Abkürzungen}

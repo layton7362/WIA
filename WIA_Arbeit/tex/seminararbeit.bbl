@@ -97,6 +97,157 @@
       \verb http://doi.acm.org/10.1145/1176617.1176622
       \endverb
     \endentry
+    \entry{haase2015}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e115b4c946a8f3959fa5ea936877a38a}{%
+           family={Chet},
+           family_i={C\bibinitperiod},
+           given={Haase.},
+           given_i={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e115b4c946a8f3959fa5ea936877a38a}
+      \strng{fullhash}{e115b4c946a8f3959fa5ea936877a38a}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{10}
+      \field{month}{12}
+      \field{note}{x}
+      \field{title}{Ten Good Rules for Bad APIs}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://medium.com/pointer-io/this-article-is-exclusive-to-pointer-a-reading-club-for-developers-9b03f3df060c
+      \endverb
+    \endentry
+    \entry{ellis2007}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=981a8473a04e088d28565b8c24f4f166}{%
+           family={Ellis},
+           family_i={E\bibinitperiod},
+           given={Brian},
+           given_i={B\bibinitperiod}}}%
+        {{hash=b6fc34909992c86cf168620c50cabe2a}{%
+           family={Stylos},
+           family_i={S\bibinitperiod},
+           given={Jeffrey},
+           given_i={J\bibinitperiod}}}%
+        {{hash=95f3f6e4fd44d355e252aebe61e8a77e}{%
+           family={Myers},
+           family_i={M\bibinitperiod},
+           given={Brad},
+           given_i={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Washington, DC, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society}%
+      }
+      \strng{namehash}{803b692820465c278b2e02e5ac958e51}
+      \strng{fullhash}{803b692820465c278b2e02e5ac958e51}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 29th International Conference on Software Engineering}
+      \field{isbn}{0-7695-2828-7}
+      \field{series}{ICSE '07}
+      \field{title}{The Factory Pattern in API Design: A Usability Evaluation}
+      \field{year}{2007}
+      \field{pages}{302\bibrangedash 312}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/ICSE.2007.85
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/ICSE.2007.85
+      \endverb
+    \endentry
+    \entry{farooq2010}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=cb2ffe502e1c635f0af38c1b3a2c834c}{%
+           family={Farooq},
+           family_i={F\bibinitperiod},
+           given={Umer},
+           given_i={U\bibinitperiod}}}%
+        {{hash=695c9f6b6f3bb2ffc6ed46298390e4b9}{%
+           family={Welicki},
+           family_i={W\bibinitperiod},
+           given={Leon},
+           given_i={L\bibinitperiod}}}%
+        {{hash=1061e90064dc6e2d36b980feef79556b}{%
+           family={Zirkler},
+           family_i={Z\bibinitperiod},
+           given={Dieter},
+           given_i={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Atlanta, Georgia, USA}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{3e8d65503dd587ac77074e17ee2e5fe5}
+      \strng{fullhash}{3e8d65503dd587ac77074e17ee2e5fe5}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the SIGCHI Conference on Human Factors in Computing Systems}
+      \field{isbn}{978-1-60558-929-9}
+      \field{series}{CHI '10}
+      \field{title}{API Usability Peer Reviews: A Method for Evaluating the Usability of Application Programming Interfaces}
+      \field{year}{2010}
+      \field{pages}{2327\bibrangedash 2336}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/1753326.1753677
+      \endverb
+      \verb{url}
+      \verb http://doi.acm.org/10.1145/1753326.1753677
+      \endverb
+      \keyw{api usability,software bugs,usability breakdowns,usability evaluation method (uem),usability inspection}
+    \endentry
+    \entry{gamme1995}{book}{}
+      \name{author}{4}{}{%
+        {{hash=abd927bf30d6566be0ac66a66e893fdd}{%
+           family={Gamma},
+           family_i={G\bibinitperiod},
+           given={Erich},
+           given_i={E\bibinitperiod}}}%
+        {{hash=233f891813bda0f3920985f97a4a7554}{%
+           family={Helm},
+           family_i={H\bibinitperiod},
+           given={Richard},
+           given_i={R\bibinitperiod}}}%
+        {{hash=fd79e5e249b219ff553fc2d811104d78}{%
+           family={Johnson},
+           family_i={J\bibinitperiod},
+           given={Ralph},
+           given_i={R\bibinitperiod}}}%
+        {{hash=e032589f0b9a38804483ab7cf5ccad7f}{%
+           family={Vlissides},
+           family_i={V\bibinitperiod},
+           given={John},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{4d2492409a24d4ed208ae6670cb91945}
+      \strng{fullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-201-63361-2}
+      \field{title}{Design Patterns: Elements of Reusable Object-oriented Software}
+      \field{year}{1995}
+    \endentry
     \entry{dimitri2017}{online}{}
       \name{author}{1}{}{%
         {{hash=263808d11755b75a549fa1bbec6a0fe7}{%
@@ -115,8 +266,12 @@
       \field{labeltitlesource}{title}
       \field{day}{04}
       \field{month}{12}
+      \field{note}{x}
       \field{title}{Oxygen}
       \field{year}{2017}
+      \verb{url}
+      \verb http://www.stack.nl/~dimitri/doxygen/index.html
+      \endverb
     \endentry
     \entry{martin2009}{book}{}
       \name{author}{1}{}{%
@@ -126,13 +281,19 @@
            given={Robert\bibnamedelima C.},
            given_i={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {mitp}%
+      }
       \strng{namehash}{4931846e75da8be6bca9cac98c006a70}
       \strng{fullhash}{4931846e75da8be6bca9cac98c006a70}
       \field{sortinit}{M}
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-3-8266-5548-7}
+      \field{note}{x}
       \field{title}{Clean Code: Refactoring, Patterns, Testen und Technicken für sauberen Code}
+      \field{volume}{1}
       \field{year}{2009}
     \endentry
     \entry{myers2016}{article}{}
@@ -163,6 +324,7 @@
       \field{issn}{0001-0782}
       \field{journaltitle}{Commun. ACM}
       \field{month}{05}
+      \field{note}{x}
       \field{number}{6}
       \field{title}{Improving API Usability}
       \field{volume}{59}
@@ -190,6 +352,7 @@
       \field{labeltitlesource}{title}
       \field{day}{04}
       \field{month}{12}
+      \field{note}{x}
       \field{title}{Javadoc Tool}
       \field{year}{2017}
       \verb{url}
@@ -221,6 +384,58 @@
       \field{title}{API Design for C++}
       \field{year}{2011}
     \endentry
+    \entry{fowler1999}{book}{}
+      \list{location}{1}{%
+        {Boston, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-201-48567-2}
+      \field{note}{x}
+      \field{title}{Refactoring: Improving the Design of Existing Code}
+      \field{year}{1999}
+    \endentry
+    \entry{robillard2009}{article}{}
+      \name{author}{1}{}{%
+        {{hash=174b77ee704d65a1ccd992f2e110c5a4}{%
+           family={Robillard},
+           family_i={R\bibinitperiod},
+           given={Martin\bibnamedelima P.},
+           given_i={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Los Alamitos, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society Press}%
+      }
+      \strng{namehash}{174b77ee704d65a1ccd992f2e110c5a4}
+      \strng{fullhash}{174b77ee704d65a1ccd992f2e110c5a4}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0740-7459}
+      \field{journaltitle}{IEEE Softw.}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{What Makes APIs Hard to Learn? Answers from Developers}
+      \field{volume}{26}
+      \field{year}{2009}
+      \field{pages}{27\bibrangedash 34}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/MS.2009.193
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/MS.2009.193
+      \endverb
+      \keyw{API design,API usability,API usability,software documentation,code examples,API design,empirical study,code examples,empirical study,software documentation}
+    \endentry
     \entry{spichale2017}{book}{}
       \name{author}{1}{}{%
         {{hash=969aac1d92b7357931108d444c647848}{%
@@ -229,13 +444,19 @@
            given={Kai.},
            given_i={K\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {dpunkt.verlag}%
+      }
       \strng{namehash}{969aac1d92b7357931108d444c647848}
       \strng{fullhash}{969aac1d92b7357931108d444c647848}
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-3-86490-387-8}
+      \field{note}{x}
       \field{title}{API-Design: Praxishandbuch für Java- und Webservice-Entwickler}
+      \field{volume}{1}
       \field{year}{2017}
     \endentry
   \endsortlist
