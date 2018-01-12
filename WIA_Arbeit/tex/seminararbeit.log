@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.13)  12 JAN 2018 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.13)  12 JAN 2018 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1642,8 +1642,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 71--72
-\OT1/ptm/m/n/10.03749 mit dem Sys-tem kom-mu-ni-zie-ren, be-steht
+Underfull \hbox (badness 1596) in paragraph at lines 71--72
+\OT1/ptm/m/n/10.03749 mit dem Sys-tem kom-mu-ni-zie-ren, ent-steht
  []
 
 
@@ -1756,9 +1756,9 @@ Package csquotes Info: Input encoding change on input line 254.
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 259.
  [4]
 Underfull \hbox (badness 2617) in paragraph at lines 283--283
  \OT1/ptm/b/n/12.045 4. Ans[]atze zur Ver-bes-se-rung all-ge-mei-ner
@@ -1803,67 +1803,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--302
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 309.
+(babel)             in language  on input line 307.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 309.
+(babel)             in language  on input line 307.
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 []\OT1/ptm/m/n/10.03749 Es bie-ten sich f[]ur mensch-li-che Tests ei-ni-ge
  []
 
 
-Underfull \hbox (badness 1803) in paragraph at lines 313--314
-\OT1/ptm/m/n/10.03749 M[]oglichkeiten an. Ei-nes da-von ist das Peer-Reivew
+Underfull \hbox (badness 2856) in paragraph at lines 311--312
+\OT1/ptm/m/n/10.03749 M[]oglichkeiten an. Ei-ne da-von ist das Peer-Reivew
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 316.
+(babel)             in language  on input line 314.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 316.
+(babel)             in language  on input line 314.
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--323
+Underfull \hbox (badness 10000) in paragraph at lines 316--321
 
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 318--323
+Underfull \hbox (badness 4492) in paragraph at lines 316--321
 \OT1/ptm/m/n/10.03749 Good APIs crea-te long-term cu-sto-mers; bad ones
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--323
+Underfull \hbox (badness 10000) in paragraph at lines 316--321
 
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 318--323
+Underfull \hbox (badness 5771) in paragraph at lines 316--321
 \OT1/ptm/m/n/10.03749 Eine API, die nut-zer-freund-lich ist, er-spart ei-nem
  []
 
-
-Underfull \hbox (badness 2229) in paragraph at lines 318--323
-\OT1/ptm/m/n/10.03749 ver-bes-sert wer-den kann, in-dem es dem Ent-wick-ler,
- []
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 325.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 325.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 331.
+(babel)             in language  on input line 329.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 331.
+(babel)             in language  on input line 329.
 [5]
-Package csquotes Info: Input encoding change on input line 332.
+Package csquotes Info: Input encoding change on input line 330.
  (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 348.
+(babel)             in language  on input line 346.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 348.
+(babel)             in language  on input line 346.
 
-Overfull \hbox (8.64758pt too wide) in paragraph at lines 355--355
+Overfull \hbox (8.64758pt too wide) in paragraph at lines 353--353
 [][][][]\OT1/ptm/m/n/8.03 https://blogs.msdn.microsoft.com/visualstudio/2010/01
 /13/searching-
  []
@@ -1872,21 +1867,21 @@ Overfull \hbox (8.64758pt too wide) in paragraph at lines 355--355
 File: img/eclipse_suche.png Graphic file (type png)
 
 <use img/eclipse_suche.png>
-Package pdftex.def Info: img/eclipse_suche.png used on input line 361.
+Package pdftex.def Info: img/eclipse_suche.png used on input line 359.
 (pdftex.def)             Requested size: 489.11449pt x 284.53038pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 366.
+(babel)             in language  on input line 364.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 366.
+(babel)             in language  on input line 364.
 <img/eclispe_suche_ergebniss.png, id=374, 1031.855pt x 965.6075pt>
 File: img/eclispe_suche_ergebniss.png Graphic file (type png)
 
 <use img/eclispe_suche_ergebniss.png>
-Package pdftex.def Info: img/eclispe_suche_ergebniss.png used on input line 370
+Package pdftex.def Info: img/eclispe_suche_ergebniss.png used on input line 368
 .
 (pdftex.def)             Requested size: 489.09706pt x 227.61029pt.
 
@@ -1894,98 +1889,106 @@ Package pdftex.def Info: img/eclispe_suche_ergebniss.png used on input line 370
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 377.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 377.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 385.
+(babel)             in language  on input line 383.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 385.
-Package csquotes Info: Input encoding change on input line 395.
+(babel)             in language  on input line 383.
+Package csquotes Info: Input encoding change on input line 393.
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 404.
+(babel)             in language  on input line 402.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 404.
+(babel)             in language  on input line 402.
  [6]
-Package csquotes Info: Input encoding change on input line 407.
+Package csquotes Info: Input encoding change on input line 405.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 )
-Package csquotes Info: Input encoding change on input line 415.
+Package csquotes Info: Input encoding change on input line 413.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 422.
+(babel)             in language  on input line 420.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 422.
+(babel)             in language  on input line 420.
+
+Underfull \vbox (badness 5533) has occurred while \output is active []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 427.
+(babel)             in language  on input line 425.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 427.
+(babel)             in language  on input line 425.
 Package acronym Info: Label `acro:PYPL' newly defined as it shall be overridden
 
-although it is yet undefined on input line 433.
+although it is yet undefined on input line 431.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 432.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 432.
  [7 <./img/eclipse_suche.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 438.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 438.
 
-Underfull \hbox (badness 1783) in paragraph at lines 442--443
+Underfull \hbox (badness 1783) in paragraph at lines 440--441
 []\OT1/ptm/m/n/10.03749 Nach fort-schrei-ten-der Ent-wick-lungs-zeit ei-ner API
 
  []
 
 Package acronym Info: Label `acro:XML' newly defined as it shall be overridden
-although it is yet undefined on input line 444.
-Package csquotes Info: Input encoding change on input line 446.
+although it is yet undefined on input line 442.
+Package csquotes Info: Input encoding change on input line 444.
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 463.
+(babel)             in language  on input line 461.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 463.
- (./seminararbeit.lol)
+(babel)             in language  on input line 461.
+ (./seminararbeit.lol
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 18.
+
+[8 <./img/eclispe_suche_ergebniss.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+ [][] [][]\OT1/ptm/m/n/10.03749 Beispiel ei-ner Me-tho-de mit 
+ []
+
+)
 \tf@lol=\write7
 \openout7 = `seminararbeit.lol'.
 
-
-(./seminararbeit.lof
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
- [8 <./img/eclispe_suche_ergebniss.png>])
+ (./seminararbeit.lof)
 \tf@lof=\write8
 \openout8 = `seminararbeit.lof'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 474.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 474.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 489.
+(babel)             in language  on input line 487.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 489.
+(babel)             in language  on input line 487.
 
-Underfull \hbox (badness 1515) in paragraph at lines 491--491
+Underfull \hbox (badness 1515) in paragraph at lines 489--489
 \OT1/ptm/m/n/10.03749 Why It Mat-ters\. In: \OT1/ptm/m/it/10.03749 Com-pa-n-ion
  to the 21st
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 491--491
+Underfull \hbox (badness 6542) in paragraph at lines 489--489
 \OT1/ptm/m/it/10.03749 Java- und Webservice-Entwickler\OT1/ptm/m/n/10.03749 . B
 d. 1. x.
  []
@@ -2001,18 +2004,18 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 492.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 490.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 490.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 490.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 492.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 490.
  (./seminararbeit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 492.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 492.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 490.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 490.
 Package rerunfilecheck Info: File `seminararbeit.out' has not changed.
-(rerunfilecheck)             Checksum: C8853C6BE63FCF677B9D436C4A484DF8;4343.
+(rerunfilecheck)             Checksum: 2EB820C4C568E3F0203BBBFF21EE53F5;4358.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2024,21 +2027,21 @@ Package logreq Info: Writing requests to 'seminararbeit.run.xml'.
 Here is how much of TeX's memory you used:
  21751 strings out of 493029
  327186 string characters out of 6136233
- 876325 words of memory out of 5000000
+ 877325 words of memory out of 5000000
  24742 multiletter control sequences out of 15000+600000
  41610 words of font info for 75 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 46i,8n,45p,975b,2381s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,8n,45p,962b,2381s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on seminararbeit.pdf (9 pages, 277600 bytes).
+Output written on seminararbeit.pdf (9 pages, 277814 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 552 compressed objects within 6 object streams
+ 580 PDF objects out of 1000 (max. 8388607)
+ 553 compressed objects within 6 object streams
  242 named destinations out of 1000 (max. 500000)
  203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

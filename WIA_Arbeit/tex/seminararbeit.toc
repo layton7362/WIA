@@ -12,23 +12,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Die Vorteile einer API}{2}{subsection.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Beispiele von schlechten API design}{3}{section.21}
+\contentsline {section}{\numberline {3}Beispiele von schlechtem API design}{3}{section.21}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Mangelnde Dokumentation}{3}{subsection.24}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Keine eindeutigen Bezeichnungen von Schnittstellen}{3}{subsection.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Factory Pattern bedacht einsetzen}{4}{subsection.138}
+\contentsline {subsection}{\numberline {3.3}Factory Pattern mit Bedacht einsetzen}{4}{subsection.138}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Ans\IeC {\"a}tze zur Verbesserung allgemeiner \ac {API}s}{5}{section.160}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Nutzer freundlicheres Design}{5}{subsection.161}
+\contentsline {subsection}{\numberline {4.1}Nutzerfreundlicheres Design}{5}{subsection.161}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}APIs Testen}{5}{subsection.162}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Ausgew\IeC {\"a}hlte \ac {API} Entwurfsmuster}{5}{section.164}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Sinnvolle Klassennamen w\IeC {\"a}hlen}{5}{subsection.165}
+\contentsline {subsection}{\numberline {5.1}Sinnvolle Klassennamen w\IeC {\"a}hlen}{6}{subsection.165}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2}Methodennamen und ihre Parameter}{6}{subsection.176}
 \defcounter {refsection}{0}\relax 
