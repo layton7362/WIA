@@ -19,17 +19,24 @@ Dieses Paper soll aufzeigen, was eine \ac{API} ist und welche Vorteile es für e
 
 \section{Einleitung}
 
-Application Programming Interfaces (API) sind kaum wegzudenken. So gut wie alle Programmbibliotheken, Frameworks und \ac{SDK} nutzen eine API. Auf der Webseite programmableweb\footnote{https://www.programmableweb.com/} werden allein über 18.000 unterschiedliche APIs aufgelistet.
+Application Programming Interfaces (API) sind kaum wegzudenken. So gut wie alle Programmbibliotheken, Frameworks und \ac{SDK} nutzen eine API. Auf der Webseite programmableweb\footnote{https://www.programmableweb.com/} werden allein über 18.000 unterschiedliche APIs aufgelistet. Abbildung \ref{apiOrte} zeigt die Vielseitigkeit einer API auf
 
 Für die Entwicklung neuer APIs gibt es einen immer größer werdenden Markt für Firmen, die aktiv ihre Dienste zur Verfügung stellen, um Unternehmen bei der Entwicklung einer API zu unterstützen, wie z. B. Apigee \footnote{https://apigee.com/api-management/}.
 
-Zudem besitzen Firmen unterschiedliche Strategien, wie sie mit ihrer API vorgehen. \cite[siehe Seite 11]{spichale2017}. So hat der Blogging-Dienst Twitter seine Popularität unter anderem mithilfe der hauseigenen API erreicht. Es bot die notwendige Infrastruktur, sodass Twitter auf unzähligen Endgeräten genutzt werden konnte. Facebook setzt mit seiner API auf Ausfallsicherheit und Skalierbarkeit. Die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen.
+Zudem besitzen Firmen unterschiedliche Strategien, wie sie mit ihrer API vorgehen. \cite[siehe Seite 11]{spichale2017}. So hat der Blogging-Dienst Twitter seine Popularität unter anderem mithilfe der hauseigenen API erreicht. Es bot die notwendige Infrastruktur, sodass Twitter auf unzähligen Endgeräten genutzt werden konnte. Facebook setzt mit seiner API auf Ausfallsicherheit und Skalierbarkeit. Die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen. 
 
 
 \section{Application Programming Interface}
 
 In diesem Kapitel wird vorgestellt, was eine \ac{API} ist. Es wird auf die Definition einer API eingegangen. Zudem werden die Vorteile einer API genauer erläutert. 
 
+\begin{figure*}[h]\label{apiOrte}
+\centering
+\includegraphics[,width=\textwidth,height=8cm]{api_beispiel.jpg}
+\caption{Einsatzorte einer API} \protect\footnotemark
+\label{apiOrte}
+\end{figure*}
+\footnotetext{http://www.arxan.com/wp-content/uploads/2016/07/api-protection-1.jpg}
 
 \subsection{Die Definition einer \ac{API}}
 
@@ -308,8 +315,7 @@ Anhand der Ergebnisse sieht man ziemlich gut, wie wichtig eine Dokumentation fü
 
 Um die Qualität einer API zu verbessern, ist es sinnvoll die API vorher zu testen. Neben den Unit-Tests \footnote{https://martinfowler.com/bliki/UnitTest.html}, gibt es auch Testmöglichkeiten, bei denen es von einem Entwickler getestet wird. Der Zweck von diesen Tests ist es, die Benutzerfreundlichkeit der APIs zu erhöhen. 
 
-Es bieten sich für menschliche Tests einige Möglichkeiten an. Eine davon ist das Peer-Reivew \cite{farooq2010}. Das Ziel einer API Peer-Review ist es, Rückmeldung zu erhalten, wie stark die Benutzerfreundlichkeit der API ist.  
-
+Es bieten sich für menschliche Tests einige Möglichkeiten an. Eine davon ist das Peer-Reivew \cite{farooq2010}. Das Ziel einer API Peer-Review ist es, Rückmeldung zu erhalten, wie stark die Benutzerfreundlichkeit der API ist. Hier werden eine oder mehrere Personen damit beauftragt, die Schnittstellen zu begutachten.
 
 \section{Ausgewählte \ac{API} Entwurfsmuster}
 
@@ -342,17 +348,16 @@ public class Number{...}
 Das Verwenden eines Substantivs in einem Klassennamen vereinfacht für den Nutzer die Suche nach einer Schnittstelle, die sich in einer naheliegenden Klasse befindet.
 Ein guter Klassenname bezieht sich immer auf den Typen, den diese Klasse darstellen soll. Daher sollte der Klassenname nicht von der technischen Implementierung abhängig sein. 
 
-
 \subsection{Methodennamen und ihre Parameter}\label{MNP}
 
-Der Name einer Methode, und damit auch die der Schnittstelle, sollte idealerweise ihren Zweck beschreiben. Einen passenden Namen für eine Methode zu wählen, kann viel Zeit kosten, allerdings erleichtert es dem Anwender, die ansonsten zeitaufwendige Suche nach einer passenden Methode \cite[siehe Seite 45f]{martin2009}.
+Der Name einer Methode, und damit auch die der Schnittstelle, sollte idealerweise ihren Zweck beschreiben. Einen passenden Namen für eine Methode zu wählen, kann viel Zeit kosten, allerdings erleichtert es dem Nutzer, die ansonsten zeitaufwendige Suche nach einer passenden Methode \cite[siehe Seite 45f]{martin2009}.
 
 Wenn sich ein Entwickler in eine neue Bibliothek einarbeiten soll, dann gibt es hierfür verschiedene Ansätze. Ein erster Ansatz wäre, dass er die Dokumentation der Schnittstellen der Bibliothek durchgeht [Abschnitt \ref{MD}]. Nach Martin ist eine Dokumentation allerdings kein Ersatz für die Bezeichner einer Schnittstelle. Martin zufolge ist es sogar so, dass eine Schnittstellen-Dokumentation ein Zeugnis dafür, dass der Entwickler dieser Schnittstelle nicht imstande war, bessere und selbsterklärendere Methodennamen zu verwenden. Das Resultat dieser Aussage ist, dass eine Schnittstelle sich demnach selbst beschreiben soll, sodass eine Dokumentation nicht erst notwendig ist. 
 
 Nach Martin \cite[siehe Seite 51f]{martin2009} ist daher beim Design einer API, für die Schnittstellen Namen zu wählen, nach denen der Nutzer einfacher suchen kann. Zudem sind auch Namen besser geeignet, die je nach Umfang der Schnittstelle eine entsprechende Länge haben. 
 Dadurch kann der Entwickler intuitiv nach einer Methode suchen, indem er nach dem Bezeichner der Methode sucht. Einige Entwicklungsumgebungen, wie z. B. Eclipse oder Microsoft Visual Studios, beinhalten Funktionen, die unter anderem das Suchen von Methoden beinhalten \footnote{http://help.eclipse.org/kepler/index.jsp Begriff: Java Search Tab} \footnote{https://blogs.msdn.microsoft.com/visualstudio/2010/01/13/searching-and-navigating-code-in-visual-studio-2010/}. Dabei ist es nicht notwendig nach dem vollen Namen der Methode zu suchen, es genügen auch einzelne Wortteile. Die Entwicklungsumgebung übernimmt dann die Suche und listet alle verfügbaren Methoden auf, die dieses Wortteil beinhalten.
 
-Abbildung \ref{suchoption} zeigt einen Bildausschnitt aus der Suchoption von Eclipse, abbildung \ref{suchergebniss} zeigt dessen Suchergebnis.
+Abbildung \ref{suchoption} zeigt einen Bildausschnitt aus der Suchoption von Eclipse, Abbildung \ref{suchergebniss} zeigt dessen Suchergebnis. Daher ist es einfacher für den Nutzer sich in einer API zurechtzufinden, wenn dessen Schnittstellen einer gewissen Konvention folgen \cite{haase2015}. Sobald sich ein Nutzer in eine API eingearbeitet hat, entwickelt er eine gewisse Routine. \cite[siehe Seite 14f]{martin2009}.
 
 \begin{figure*}[h]
 \centering
@@ -361,24 +366,12 @@ Abbildung \ref{suchoption} zeigt einen Bildausschnitt aus der Suchoption von Ecl
 \label{suchoption}
 \end{figure*}
 
-\subsection{Spring}\label{spring}
-
 \begin{figure*}[h]\label{suchergebniss}
 \centering
 \includegraphics[,width=\textwidth,height=8cm]{eclispe_suche_ergebniss.png}
 \caption{Suchergebnis aus Eclipse}
 \label{suchergebniss}
 \end{figure*}
-
-Daher ist es einfacher für den Nutzer sich in einer API zurechtzufinden, wenn dessen Schnittstellen einer gewissen Konvention folgen \cite{haase2015}. Sobald sich ein Nutzer in eine API eingearbeitet hat, entwickelt er eine gewisse Routine. \cite[siehe Seite 14f]{martin2009}. 
-
-
-
-\subsection{Keine redundanten Methoden}
-
---TODO-- Noch zu bearbeiten ---
-Hier soll es aufzeigen, wieso man nicht für alles eine Methode schreiben sollte, wie z.B. beim einlesen von einem Images.
-
 
 \subsection{Refactoring}\label{refactorL}
 
@@ -412,10 +405,13 @@ Mit dem Namen wäre diese Methode nun deutlich lesbarer für den Nutzer dieser A
 
 \begin{lstlisting}[language=Java,caption=Beispiel einer leserliche Methode]
 
-public int[] combine(int[] head, int[]tail);
+public int[] combine(int[] head, int[] tail);
 
 \end{lstlisting}
 
+Nun ist ersichtlich, wie genau beide Arrays miteinander kombiniert werden. Das erleichtert dem Nutzer 
+
+Das Refactoring ist eine immense Zeitersparnis, bei dem Verbessern der bestehenden Schnittstelle. Dies ist allerdings nur 
 
 \section{Tools zur Unterstützung der Entwicklung einer API}
 
@@ -441,7 +437,7 @@ Nach fortschreitender Entwicklungszeit einer API kann es immer wieder zu nicht k
 
 Mithilfe von Checkstyle lässt sich der Quellcode automatisiert analysieren, um so die Konvention einzuhalten. Was genau alles überprüft wird und wie, wird in einer \ac{XML} Datei festgelegt. 
 
-\begin{lstlisting}[language=Java,caption=Auszug einer XML Datei]
+\begin{lstlisting}[language=Java,caption=Auszug einer checkstyle XML Datei]
 
 [...]
 <module name="Checker">
@@ -459,8 +455,17 @@ Mithilfe von Checkstyle lässt sich der Quellcode automatisiert analysieren, um 
 Durch Checkstyle lässt sich sehr viel Zeit sparen, die sonst in die Pflege des Quellcodes investiert werden müsste. Das Ergebnis wird wiederum in einer XML Datei gespeichert. Zudem wird nach dem Analysieren noch eine \ac{HTML} Datei erzeugt, in dem sich das Ergebnis übersichtlich anschauen lässt.  
 
 \section{Fazit}
---TODO-- Noch zu bearbeiten
 
+Application Programming Interfaces werden in der IT-Branche fast überall verwendet. Eine API spielt somit in der Softwareentwicklung eine große Rolle. Daher bin ich auch der Meinung, dass bei der Entwicklung eines Systems, genügend Zeit in die API investiert werden sollte. Eine API, welche den Nutzer bei der Entwicklung mit berücksichtigt, kann für dessen Erfolg entscheidend sein. Daher finde ich es auch wichtig, dass neben einer ausführlichen Dokumentation der Schnittstellen auch einige Beispiele dokumentiert werden sollten. Sie können für ein besseres Verständnis, wie die API genutzt werden soll, sorgen.
+
+Dem Nutzer sollte die Möglichkeit gegeben werden sich auf verschiedene arten in die API einzuarbeiten, da viele sich anders in einer API zurechtfinden. So sollte neben der Dokumentation auch auf die Namensgebung geachtet werden. Ähnliche Schnittstellen sollten auch ähnliche Bezeichner haben. Das sorgt dafür, dass beim Lernen einer API, der Nutzer sich besser zurecht findet, wie z. B. bei den Wrapper Klassen in Java. 
+
+Bei einer durchdachten API lässt sich für ein Unternehmen auch viel Zeit und Geld sparen. 
+Meiner Meinung ist der größte Vorteil das Wiederverwenden von bereits Implementierten Schnittstellen. Diese sind meist nicht nur robuster, als neu entwickelte Schnittstellen, sondern sie sind womöglich auch bekannt, daher gibt es möglicherweise auch Entwickler, die diese API bereits kennen. Idealerweise sind ältere APIs auch bereits gut dokumentiert. Somit kann mehr Zeit in die Entwicklung von neuer Software investiert werden. 
+
+Es stehen Tools zur Verfügung, die bei der Entwicklung und dem Testen von Schnittstellen helfen können. Ob nun Entwicklungsumgebungen oder Programme, die den bestehenden Quellcode analysieren, das alles kann helfen, eine Schnittstelle benutzerfreundlicher zu gestalten.
+
+Das stetige Vderbessern von Schnittstellen wird auch in Zukunft eine große Rolle bei der Softwareentwicklung spielen. Laut Myers \cite{myers2016} stellten sich einige Annahmen, die früher als nutzerfreundlich betrachtet wurden, als Irrtum heraus.   
 
 %% --------------------------------------------------------------------
 
