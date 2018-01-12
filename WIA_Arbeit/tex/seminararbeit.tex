@@ -19,11 +19,11 @@ Dieses Paper soll aufzeigen, was eine \ac{API} ist und welche Vorteile es für e
 
 \section{Einleitung}
 
-Application Programming Interfaces(API) sind kaum wegzudenken. So gut wie alle Programmbibliotheken, Frameworks und \ac{SDK} nutzen eine API. Auf der Webseite programmableweb\footnote{https://www.programmableweb.com/} werden allein über 18.000 unterschiedliche APIs aufgelistet.
+Application Programming Interfaces (API) sind kaum wegzudenken. So gut wie alle Programmbibliotheken, Frameworks und \ac{SDK} nutzen eine API. Auf der Webseite programmableweb\footnote{https://www.programmableweb.com/} werden allein über 18.000 unterschiedliche APIs aufgelistet.
 
-Für die Entwicklung neuer APIs gibt es ein immer größer werdender Markt für Firmen, die aktiv ihre Dienste zur Verfügung stellen, um Unternehmen bei der Entwicklung einer API zu unterstützen, wie z. B. Apigee \footnote{https://apigee.com/api-management/}.
+Für die Entwicklung neuer APIs gibt es einen immer größer werdenden Markt für Firmen, die aktiv ihre Dienste zur Verfügung stellen, um Unternehmen bei der Entwicklung einer API zu unterstützen, wie z. B. Apigee \footnote{https://apigee.com/api-management/}.
 
-Zudem besitzen Firmen unterschiedliche Strategien, wie sie mit ihrer API vorgehen. \cite[siehe Seite 11]{spichale2017}. So hat der Blogging-Dienst Twitter seine Popularität unter anderem mithilfe der hauseigenen API erreicht. Es bot die notwendige Infrastruktur, sodass Twitter auf unzähligen Endgeräte genutzt werden konnte. Facebook setzt mit ihrer API auf Ausfallsicherheit und Skalierbarkeit. Die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen.
+Zudem besitzen Firmen unterschiedliche Strategien, wie sie mit ihrer API vorgehen. \cite[siehe Seite 11]{spichale2017}. So hat der Blogging-Dienst Twitter seine Popularität unter anderem mithilfe der hauseigenen API erreicht. Es bot die notwendige Infrastruktur, sodass Twitter auf unzähligen Endgeräten genutzt werden konnte. Facebook setzt mit ihrer API auf Ausfallsicherheit und Skalierbarkeit. Die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen.
 
 
 \section{Application Programming Interface}
@@ -68,7 +68,7 @@ Es gibt viele gute Gründe, die für das erstellen einer \ac{API} sprechen. Nach
 \begin{description}
 \item [Robustheit] \hfill \\
 
-Eine \ac{API} sorgt für robusteren Code. Da die Entwickler nur über eine Schnittstelle mit dem System kommunizieren, besteht eine Datenkapselung. Es sorgt dafür, dass die eigentliche Implementation ausgetauscht werden kann, ohne dass es beim Nutzer angepasst werden muss. So lässt sich ganz leicht die bestehende Implementierung austauschen, ohne dass der Nutzer gezwungen ist seinen Quellcode anzupassen. Es lässt sich somit z. B. ein Algorithmus durch einen besseren Algorithmus austauschen.
+Eine \ac{API} sorgt für robusteren Code. Da die Entwickler nur über eine Schnittstelle mit dem System kommunizieren, besteht eine Datenkapselung. Es sorgt dafür, dass die eigentliche Implementation ausgetauscht werden kann, ohne dass es beim Nutzer angepasst werden muss. So lässt sich ganz leicht die bestehende Implementierung austauschen, ohne dass der Nutzer gezwungen ist seinen Quellcode anzupassen. Es lässt sich somit z. B. ein Algorithmus durch einen besseren Algorithmus austauschen.\\
 
 \item [Parallele Entwicklung]\hfill \\
 
@@ -180,7 +180,7 @@ Es wird keine Zahl der Methode als Monat übergeben, sondern eine Konstante. Auc
 
 Ein anderes Beispiel für eine Methode, die Missverstanden werden kann \cite[ab Minute 7]{bloch2009}, ist folgende Methode:
 
-\begin{lstlisting}[language=Java,caption=getBoolean methode aus java.lang.Boolean]
+\begin{lstlisting}[language=Java,caption=getBoolean Methode aus java.lang.Boolean]
 
 public static boolean Boolean.getBoolean(String name);
 
@@ -349,27 +349,28 @@ Ein guter Klassenname bezieht sich immer auf den Typen, den diese Klasse darstel
 
 Der Name einer Methode, und damit auch die der Schnittstelle, sollte idealerweise ihren Zweck beschreiben. Einen passenden Namen für eine Methode zu wählen, kann viel Zeit kosten, allerdings erleichtert es dem Anwender, die ansonsten zeitaufwendige Suche nach einer passenden Methode \cite[siehe Seite 45f]{martin2009}.
 
-Wenn sich ein Entwickler in eine neue Bibliothek einarbeiten soll, dann gibt es hierfür verschiedene Ansätze. Ein erster Ansatz wäre, dass er die Dokumentation der Schnittstellen der Bibliothek durchgeht \ref{MD}. Nach Martin ist eine Dokumentation allerdings kein Ersatz für die Bezeichner einer Schnittstelle. Martin zufolge ist es sogar so, dass eine Schnittstellen-Dokumentation ein Zeugnis dafür, dass der Entwickler dieser Schnittstelle nicht imstande war, bessere und selbsterklärendere Methodennamen zu verwenden. Das Resultat dieser Aussage ist, dass eine Schnittstelle sich demnach selbst beschreiben soll, sodass eine Dokumentation nicht erst notwendig ist. 
+Wenn sich ein Entwickler in eine neue Bibliothek einarbeiten soll, dann gibt es hierfür verschiedene Ansätze. Ein erster Ansatz wäre, dass er die Dokumentation der Schnittstellen der Bibliothek durchgeht [Abschnitt \ref{MD}]. Nach Martin ist eine Dokumentation allerdings kein Ersatz für die Bezeichner einer Schnittstelle. Martin zufolge ist es sogar so, dass eine Schnittstellen-Dokumentation ein Zeugnis dafür, dass der Entwickler dieser Schnittstelle nicht imstande war, bessere und selbsterklärendere Methodennamen zu verwenden. Das Resultat dieser Aussage ist, dass eine Schnittstelle sich demnach selbst beschreiben soll, sodass eine Dokumentation nicht erst notwendig ist. 
 
 Nach Martin \cite[siehe Seite 51f]{martin2009} ist daher beim Design einer API, für die Schnittstellen Namen zu wählen, nach denen der Nutzer einfacher suchen kann. Zudem sind auch Namen besser geeignet, die je nach Umfang der Schnittstelle eine entsprechende Länge haben. 
 Dadurch kann der Entwickler intuitiv nach einer Methode suchen, indem er nach dem Bezeichner der Methode sucht. Einige Entwicklungsumgebungen, wie z. B. Eclipse oder Microsoft Visual Studios, beinhalten Funktionen, die unter anderem das Suchen von Methoden beinhalten \footnote{http://help.eclipse.org/kepler/index.jsp Begriff: Java Search Tab} \footnote{https://blogs.msdn.microsoft.com/visualstudio/2010/01/13/searching-and-navigating-code-in-visual-studio-2010/}. Dabei ist es nicht notwendig nach dem vollen Namen der Methode zu suchen, es genügen auch einzelne Wortteile. Die Entwicklungsumgebung übernimmt dann die Suche und listet alle verfügbaren Methoden auf, die dieses Wortteil beinhalten.
 
-Die folgende Abbildung zeigt einen Bildausschnitt aus der Suchoption von Eclipse. Das danach folgende Bild ist dessen Suchergebnis.
+Abbildung \ref{suchoption} zeigt einen Bildausschnitt aus der Suchoption von Eclipse, abbildung \ref{suchergebniss} zeigt dessen Suchergebnis.
 
-\begin{figure}[!ht]
+\begin{figure*}[h]
 \centering
-\includegraphics[width=8cm]{eclipse_suche.png}
+\includegraphics[,width=\textwidth,height=10cm]{eclipse_suche.png}
 \caption{Suchoption aus Eclipse}
-\label{fig_sim}
-\end{figure}
+\label{suchoption}
+\end{figure*}
 
+\subsection{Spring}\label{spring}
 
-\begin{figure}[!ht]
+\begin{figure*}[h]\label{suchergebniss}
 \centering
-\includegraphics[width=8cm]{eclispe_suche_ergebniss.png}
+\includegraphics[,width=\textwidth,height=8cm]{eclispe_suche_ergebniss.png}
 \caption{Suchergebnis aus Eclipse}
-\label{fig_sim}
-\end{figure}
+\label{suchergebniss}
+\end{figure*}
 
 Daher ist es einfacher für den Nutzer sich in einer API zurechtzufinden, wenn dessen Schnittstellen einer gewissen Konvention folgen \cite{haase2015}. Sobald sich ein Nutzer in eine API eingearbeitet hat, entwickelt er eine gewisse Routine. \cite[siehe Seite 14f]{martin2009}. 
 
@@ -391,7 +392,7 @@ Das Refactoring kann dazu genutzt werden, solche Missstände auszubessern und de
  
 Als Beispiel soll folgende, sehr simple gehaltene, Schnittstelle dienen:
  
-\begin{lstlisting}[language=Java,caption=Beispiel einer schwer zu lesenen Methode]
+\begin{lstlisting}[language=Java,caption=Beispiel einer schwer zu lesende Methode]
 
 public int[] fusion(int[] a, int[] b);
 
@@ -403,7 +404,7 @@ Mithilfe von Refactoring lässt sich diese Methode so abändern, dass auch alle 
 
 Der Name der Methode kann mithilfe von Refactoring abgeändert werden, unabhängig von der Funktionsweise der Methode. Es wäre also möglich die Methode folgendermaßen zu benennen:
 
-\begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
+\begin{lstlisting}[language=Java,caption=Beispiel einer Methode mit unverständlichen Parametern]
 
 public int[] combine(int[] a, int[] b);
 
@@ -411,7 +412,7 @@ public int[] combine(int[] a, int[] b);
 
 Mit dem Namen wäre diese Methode nun deutlich lesbarer für den Nutzer dieser API. Allerdings könnte es aufgrund der Parameterbenennung zu Unklarheiten kommen. Es ist nicht eindeutig ersichtlich, ob b an a angehängt wird oder andersherum. Es wäre mithilfe von Refactoring möglich beide Parameter so umzubenennen, sodass ihre Namen ihre Rolle klar hervorheben. Auch hier wäre es nicht notwendig, in der Implementierung die Namen anzupassen:
 
-\begin{lstlisting}[language=Java,caption=Beispiel einer unleserliche Methode]
+\begin{lstlisting}[language=Java,caption=Beispiel einer leserliche Methode]
 
 public int[] combine(int[] head, int[]tail);
 
@@ -429,7 +430,7 @@ Es gibt sehr viele Entwicklungsumgebungen, mit deren Hilfe das Programmieren erl
  
 Neben der Entwicklungsumgebung von Microsoft gibt es auch noch IntelliJ von JetBrains  \footnote{https://www.jetbrains.com/idea/}. Ähnlich wie Microsofts Visual Studio bietet IntelliJ Sprachunterstützung für viele verschiedene Programmiersprachen an. Auch gibt es hier sowohl eine kostenpflichtige als auch eine Community Version. Im Gegensatz zu Microsoft Visual Studio ist IntelliJ auch außerhalb von Microsoft Windows verfügbar. 
 
-Die beliebteste Entwicklungsumgebung laut \ac{PYPL} ist das in Java geschriebene Programm Eclipse von Eclipse Software \footnote{http://www.eclipse.org/} \footnote{http://www.eclipse.org/}. Auch Eclipse erlaubt mithilfe von Erweiterungen eine Sprachunterstützung von unterschiedlichen Sprachen, ursprünglich war sie dabei allerdings nur für die Programmiersprache Java gedacht. All die genannten Entwicklungsumgebungen unterstützen das Refactoring \ref{refactorL}. 
+Die beliebteste Entwicklungsumgebung laut \ac{PYPL} ist das in Java geschriebene Programm Eclipse von Eclipse Software \footnote{http://www.eclipse.org/} \footnote{http://www.eclipse.org/}. Auch Eclipse erlaubt mithilfe von Erweiterungen eine Sprachunterstützung von unterschiedlichen Sprachen, ursprünglich war sie dabei allerdings nur für die Programmiersprache Java gedacht. All die genannten Entwicklungsumgebungen unterstützen das Refactoring [Abschnitt \ref{refactorL}]. 
 
 Entwicklungsumgebungen sind eine große Hilfe beim Entwickeln und Verbessern einer API. Da die Entwickler meist über eine Entwicklungsumgebung auf eine API zugreifen, kann man leicht nachverfolgen, wie die natürliche Arbeitsweise eines Entwicklers ist.
 
