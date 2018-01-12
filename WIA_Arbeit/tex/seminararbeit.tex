@@ -23,24 +23,24 @@ Application Programming Interfaces (API) sind kaum wegzudenken. So gut wie alle 
 
 Für die Entwicklung neuer APIs gibt es einen immer größer werdenden Markt für Firmen, die aktiv ihre Dienste zur Verfügung stellen, um Unternehmen bei der Entwicklung einer API zu unterstützen, wie z. B. Apigee \footnote{https://apigee.com/api-management/}.
 
-Zudem besitzen Firmen unterschiedliche Strategien, wie sie mit ihrer API vorgehen. \cite[siehe Seite 11]{spichale2017}. So hat der Blogging-Dienst Twitter seine Popularität unter anderem mithilfe der hauseigenen API erreicht. Es bot die notwendige Infrastruktur, sodass Twitter auf unzähligen Endgeräten genutzt werden konnte. Facebook setzt mit ihrer API auf Ausfallsicherheit und Skalierbarkeit. Die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen.
+Zudem besitzen Firmen unterschiedliche Strategien, wie sie mit ihrer API vorgehen. \cite[siehe Seite 11]{spichale2017}. So hat der Blogging-Dienst Twitter seine Popularität unter anderem mithilfe der hauseigenen API erreicht. Es bot die notwendige Infrastruktur, sodass Twitter auf unzähligen Endgeräten genutzt werden konnte. Facebook setzt mit seiner API auf Ausfallsicherheit und Skalierbarkeit. Die Firma Best Buy entwickelte eine API, um ihren Online-Dienst weiter auszubauen.
 
 
 \section{Application Programming Interface}
 
-In diesem Kapitel wird vorgestellt, was eine \ac{API} ist. Es wird die Definition einer  API eingegangen. Zudem werden die Vorteile einer API genauer erläutert. 
+In diesem Kapitel wird vorgestellt, was eine \ac{API} ist. Es wird auf die Definition einer API eingegangen. Zudem werden die Vorteile einer API genauer erläutert. 
 
 
 \subsection{Die Definition einer \ac{API}}
 
 Eine \ac{API} besitzt keine einheitliche Definition. Die unterschiedlichen Erklärungsansätze weichen an bestimmten Punkten voneinander ab. So beschreibt Reddy \cite{reddy2011}, dass eine API Schnittstellen hat, die eine Abstraktion eines Problems darstellen und wie Entwickler diese nutzen, um das bestehende Problem zu lösen.
-Blochs Definition ist dabei etwas Allgemeiner. Laut Bloch \cite{bloch2014} handelt es sich um eine \ac{API}, wenn folgende Kriterien erfüllt sind:
+Blochs Definition ist dabei etwas Allgemeiner \cite{bloch2014}. Laut Bloch handelt es sich um eine \ac{API}, wenn folgende Kriterien erfüllt sind:
 \begin{enumerate}
 \item Eine API bietet eine Menge an Operationen an, welche durch ihre Eingaben und Ausgaben definiert sind.\\
 \item Es ist möglich die Schnittstellen neu zu implementieren, ohne dass der Nutzer seinen Code anpassen muss.
 \end{enumerate}
 
-Allgemein kann eine \ac{API} als etwas beschrieben werden, dass dem Nutzer zur Verfügung gestellt wird, sodass dieser darüber mit einem Softwaresystem kommunizieren kann.
+Allgemein kann eine \ac{API} als etwas beschrieben werden, das dem Nutzer zur Verfügung gestellt wird, sodass dieser darüber mit einem Softwaresystem kommunizieren kann.
 Im folgenden Paper wird diese Definition zugrunde gelegt.\\
 Folgende beispielhafte Java Methode soll verdeutlichen, wie eine Schnittstelle konkret aussehen kann:
 
@@ -50,52 +50,52 @@ public String linkStrings(String head , String tail);
 
 \end{lstlisting}
 
-Der Name der Schnittstelle, die auch eine Methode ist, lautet linkStrings, ihre Eingaben sind zwei Strings, mit den Bezeichnern head und tail. Bei der Ausgabe der Methode handelt es sich um den Rückgabewert, welches in diesem Fall als Typ auch ein String ist. Die eigentliche Implementierung ist dabei für den Nutzer, der diese Schnittstelle nutzt, nicht relevant. Der Nutzer benötigt zur Nutzung der Schnittstelle ausschließlich die Schnittstelle selbst. Dessen Implementierung kann sich an einer anderen Stelle befinden.
+Der Name der Schnittstelle, die auch eine Methode ist, lautet linkStrings, ihre Eingaben sind zwei Strings, mit den Bezeichnern \textit{head} und \textit{tail}. Bei der Ausgabe der Methode handelt es sich um den Rückgabewert, welcher in diesem Fall als Typ auch vom Typ String ist. Die eigentliche Implementierung ist dabei für den Nutzer, der diese Schnittstelle nutzt, nicht relevant. Der Nutzer benötigt zur Nutzung der Schnittstelle ausschließlich die Schnittstelle selbst. Dessen Implementierung kann sich an einer anderen Stelle befinden.
 
 \subsection{Die Arten einer API}
 
-Es gibt unterschiedliche Arten einer API \cite{myers2016}. Es ist möglich eine API grob in drei Kategorien einzuteilen. Interne APIs sind nicht für die Öffentlichkeit gedacht. Sie werden intern verwendet und sind daher nicht auf die Akzeptanz der Community angewiesen. Dies sorgt dafür, dass interne APIs nicht denselben strengen Regeln unterlegen sind, die für öffentliche API gelten. Das bedeutet, dass diese API noch nicht von unzähligen Nutzern genutzt wird, nur die Entwickler, die an dieser API selbst mitwirken. Daher ist es möglich Änderungen an der Schnittstelle vorzunehmen, ohne irgendwelche Nutzer möglicherweise zum Ändern ihres Codes zu zwingen. Sie helfen dabei, interne Strukturen umzusetzen, die dass arbeiten in verschiedenen Teams ermöglichen. 
+Es gibt unterschiedliche Arten einer API \cite{myers2016}. Es ist möglich eine API grob in drei Kategorien einzuteilen. Interne APIs sind nicht für die Öffentlichkeit gedacht. Sie werden intern verwendet und sind daher nicht auf die Akzeptanz der Community angewiesen. Dies sorgt dafür, dass interne APIs nicht denselben strengen Regeln unterliegen sind, die für öffentliche API gelten. Das bedeutet, dass diese API noch nicht von unzähligen Nutzern genutzt wird, sondern nur die Entwickler, die an dieser API selbst mitwirken. Daher ist es möglich Änderungen an der Schnittstelle vorzunehmen, ohne irgendwelche Nutzer möglicherweise zum Ändern ihres Codes zu zwingen. Sie helfen dabei, interne Strukturen umzusetzen, die das Arbeiten in verschiedenen Teams ermöglichen. 
 
-Öffentliche APIs sind der Öffentlichkeit zugänglich. Sobald eine API öffentlich zugreifbar ist, ist es kaum möglich diese so abzuändern, ohne dass den Nutzern dieser API auch ihren Code anpassen müssen. Zu einer guten öffentlichen API gehört auch eine dazu passende Dokumentation. Beispiele hierfür wäre das \ac{JDK} oder die \ac{STL} von C.
+Öffentliche APIs sind der Öffentlichkeit zugänglich. Sobald eine API öffentlich verfügbar ist, ist es kaum möglich diese so abzuändern, dass kein Nutzer dieser API seinen Code anpassen muss. Zu einer guten öffentlichen API gehört auch eine dazu passende Dokumentation. Beispiele hierfür wäre das \ac{JDK} oder die \ac{STL} von C.
 
 Neben der öffentlichen und internen API gibt es noch die remote APIs. Hier werden die Schnittstellen über das Netzwerk zugänglich gemacht. Für den Nutzer soll dabei der Eindruck entstehen, als würde sich die API lokal befinden und nicht in einem anderen System. Der Aufruf über das Netzwerk soll dabei verborgen bleiben. Beispiel hierfür wäre die remote API von Java.
 
 
 \subsection{Die Vorteile einer API}
 
-Es gibt viele gute Gründe, die für das erstellen einer \ac{API} sprechen. Nach Reddy \cite{reddy2011} sprechen insbesondere folgende Gründe für das entwickeln einer API:
+Es gibt viele gute Gründe, die für das Erstellen einer \ac{API} sprechen. Nach Reddy \cite{reddy2011} sprechen insbesondere folgende Gründe für das entwickeln einer API:
 
 \begin{description}
 \item [Robustheit] \hfill \\
 
-Eine \ac{API} sorgt für robusteren Code. Da die Entwickler nur über eine Schnittstelle mit dem System kommunizieren, besteht eine Datenkapselung. Es sorgt dafür, dass die eigentliche Implementation ausgetauscht werden kann, ohne dass es beim Nutzer angepasst werden muss. So lässt sich ganz leicht die bestehende Implementierung austauschen, ohne dass der Nutzer gezwungen ist seinen Quellcode anzupassen. Es lässt sich somit z. B. ein Algorithmus durch einen besseren Algorithmus austauschen.\\
+Eine \ac{API} sorgt für robusteren Code. Da die Entwickler nur über eine Schnittstelle mit dem System kommunizieren, entsteht eine Datenkapselung. Es sorgt dafür, dass die eigentliche Implementation ausgetauscht werden kann, ohne dass es beim Nutzer angepasst werden muss. So lässt sich ganz leicht die bestehende Implementierung austauschen, ohne dass der Nutzer gezwungen ist seinen Quellcode anzupassen. Es lässt sich somit z. B. ein Algorithmus durch einen besseren Algorithmus austauschen.\\
 
 \item [Parallele Entwicklung]\hfill \\
 
-Wenn ein Entwickler, beim entwickeln eines Programms den Quellcode von einem seiner Kollegen benötigt, dieser allerdings den Quellcode noch nicht fertiggestellt hat, würde eine Wartezeit entstehen. Es müsste solange gewartet werden, bis der benötigte Quellcode fertiggestellt ist. Es führt zu ein immenser Zeitgewinn, wenn sich stattdessen beide einigen würden, wie die Schnittstellen auszusehen haben. So könnte vor der Implementierung der Schnittstellen ein Mockup erstellen werden, sodass sich der Quellcode  Compilieren lässt. Die eigentliche Implementierung der Schnittstellen kann so später stattfinden, sodass der Nutzer dieser Schnittstelle nur wenige, bis keine Änderung vornehmen muss.
+Wenn ein Entwickler, bei der Implementierung eines Programms den Quellcode von einem seiner Kollegen benötigt, dieser allerdings den Quellcode noch nicht fertiggestellt hat, würde eine Wartezeit entstehen. Es müsste solange gewartet werden, bis der benötigte Quellcode fertiggestellt ist. Es führt zu einem immensen Zeitgewinn, wenn sich stattdessen beide einigen würden, wie die Schnittstellen definiert werden soll. So könnte vor der Implementierung der Schnittstellen ein Mockup erstellt werden, sodass sich der Quellcode  compilieren lässt. Die eigentliche Implementierung der Schnittstellen kann so später stattfinden, sodass der Nutzer dieser Schnittstelle nur wenige, bis keine Änderung vornehmen muss.
 
 So lässt es sich realisieren, dass mehrere Teams parallel entwickeln können, ohne jedes Detail von den Aufgaben der anderen Teams zu kennen.\\
 	
 \item [Wiederverwendbarkeit]\hfill \\
 	
-Eines der größten Vorteile einer API ist die Wiederverwendbarkeit von bisher existierendem Quellcode. Das Entwickeln von eigenen Schnittstellen und dessen Implementierungen kostet sehr viel Zeit und Geld.
+Einer der größten Vorteile einer API ist die Wiederverwendbarkeit von bereits existierendem Quellcode. Das Entwickeln von eigenen Schnittstellen und dessen Implementierungen kostet sehr viel Zeit.
 
 Durch das Wiederverwenden einer \ac{API}, kann sehr viel Geld gespart werden. Dabei stehen sowohl kostenpflichtige, als auch kostenlose zur Auswahl. Es existieren viele unterschiedliche \ac{API}s für die unterschiedlichsten Probleme.
 
-Es gibt als Beispiel viele APIs, die sich mit dem laden von Bildern beschäftigen  \footnote{http://cimg.eu/}. Viele solcher Bibliotheken haben bereits einen gewissen Reifeprozess durchgemacht. Sie wurden ausgiebig getestet und haben auch ein breites Spektrum an Informationen. Als Beispiel ist hier die Spielebibliothek LibGDX zu nennen. Es hat eine große Community, an die sich Entwickler wenden können, falls sie fragen haben \footnote{http://www.badlogicgames.com/forum/}.
+Es gibt z. B. viele APIs, die sich mit dem Laden von Bildern beschäftigen  \footnote{http://cimg.eu/}. Viele solcher Bibliotheken haben bereits einen gewissen Reifeprozess durchlaufen. Sie wurden ausgiebig getestet und haben auch ein breites Spektrum an Dokumentationen. Als Beispiel ist hier die Spielebibliothek LibGDX zu nennen. Sie hat eine große Community, an die sich Entwickler wenden können, falls sie Fragen haben \footnote{http://www.badlogicgames.com/forum/}.
 \end{description}
 
 
-\section{Beispiele von schlechten API design}
+\section{Beispiele von schlechtem API design}
 
-Es gibt sehr viele Programmbibliotheken, die sehr viele Schnittstellen anbieten, auf welche die Entwickler Zugriff haben. Bei einer Erweiterung der Bibliothek kommen zudem immer mehr Schnittstellen hinzu. Wo sich noch in dem \ac{JDK} aus Java 8 4240 Klassen befinden \footnote{https://docs.oracle.com/javase/8/docs/api/}, hat dessen Nachfolger Java 9 bereits 6005 Klassen \footnote{https://docs.oracle.com/javase/9/docs/api/}. Bei einer solch wachsenden Anzahl an Klassen ist es wichtig, sich ein Konzept auszudenken, damit der Nutzer bei einer Bibliothek keine Schwierigkeiten bekommt. Wenn einzelne Punkte nicht eingehalten werden, kann der Nutzer schnell den Überblick verlieren. Der Erfolg einer Bibliothek kann unter anderem dadurch gemessen werden, wie häufig die Bibliothek von verschiedenen Entwicklern genutzt wird. In diesem Kapitel werden Punkte aufgezählt, die den Erfolg einer Bibliothek bestimmen können.
+Es gibt viele Programmbibliotheken, die sehr viele Schnittstellen anbieten, auf welche die Entwickler Zugriff haben. Bei einer Erweiterung der Bibliothek kommen zudem immer mehr Schnittstellen hinzu. Wo sich noch in \ac{JDK} aus Java 8 4240 Klassen befinden \footnote{https://docs.oracle.com/javase/8/docs/api/}, hat dessen Nachfolger Java 9 bereits 6005 Klassen \footnote{https://docs.oracle.com/javase/9/docs/api/}. Bei einer solch wachsenden Anzahl an Klassen ist es wichtig, sich ein Konzept auszudenken, damit der Nutzer bei einer Bibliothek keine Schwierigkeiten bekommt. Wenn einzelne Punkte nicht eingehalten werden, kann der Nutzer schnell den Überblick verlieren. Der Erfolg einer Bibliothek kann unter anderem dadurch gemessen werden, wie häufig die Bibliothek von verschiedenen Entwicklern genutzt wird. In diesem Kapitel werden Punkte genannt, die den Erfolg einer Bibliothek bestimmen können.
 
 
 \subsection{Mangelnde Dokumentation}\label{MD}
 
-Die Dokumentation einer Bibliothek beschreibt ihre Funktionalität, auf die der Nutzer zugreifen kann. So werden die Schnittstellen einer Bibliothek in der Dokumentation definiert, sowie mit einer zusätzlichen Beschreibung versehen. Zusätzlich kann eine Dokumentation noch weitere Punkte beinhalten, wie Namenskonventionen. Ein bekanntes Beispiel hierfür ist die Java Dokumentation von Oracle. Hier werden alle Klassen, auf die der Nutzer Zugriff hat, angezeigt. Neben den Beschreibungen der Klassen, gibt es in der Java API Dokumentation auch die Beschreibungen für die Methoden der Klassen.
+Die Dokumentation einer Bibliothek beschreibt ihre Funktionalität, auf die der Nutzer zugreifen kann. So werden die Schnittstellen einer Bibliothek in der Dokumentation definiert, sowie mit einer zusätzlichen Beschreibung versehen. Zusätzlich kann eine Dokumentation noch weitere Punkte beinhalten, wie Namenskonventionen oder Beispiele, wie die API genutzt werden kann. Ein bekanntes Beispiel hierfür ist die Java Dokumentation von Oracle. Hier werden alle Klassen, auf die der Nutzer Zugriff hat, angezeigt. Neben den Beschreibungen der Klassen, gibt es in der Java API Dokumentation auch die Beschreibungen für die Methoden der Klassen.
 
-Für das Erstellen von Dokumentationen gibt es viele Möglichkeiten. Die Programmiersprache Java bietet für die Dokumentation des Quellcodes das Javadoc an \cite{oracle2017}. Bei Javadoc handelt es sich um ein Tool für das Generieren von API Dokumentation. Dabei braucht ein Entwickler z. B. über einer Methode nur ein Javadoc Kommentar zu schreiben, sodass das Javadoc Tool es in \ac{HTML} code umwandeln kann. Beim Javadoc Kommentar lassen sich auch die Abhängigkeiten als Referenzen zu anderen Klassen und Methoden herstellen. Das erleichtert dem Nutzer zusätzlich die Suche nach der benötigten Klasse, da der Nutzer per Mausklick die benötigte Seite im \ac{HTML} aufrufen kann. Die Java API Dokumentation selber wurde mithilfe von Javadoc erstellt. Folgend wird eine Methode mitsamt deren Javadoc aus der java.lang.String Klasse gezeigt:
+Für das Erstellen von Dokumentationen gibt es viele Möglichkeiten. Die Programmiersprache Java bietet für die Dokumentation des Quellcodes das Javadoc an \cite{oracle2017}. Bei Javadoc handelt es sich um ein Tool für das Generieren von API Dokumentation. Dabei braucht ein Entwickler z. B. über einer Methode nur ein Javadoc Kommentar zu schreiben, sodass das Javadoc Tool es in \ac{HTML} Code umwandeln kann. Beim Javadoc Kommentar lassen sich auch die Abhängigkeiten als Referenzen zu anderen Klassen und Methoden herstellen. Das erleichtert dem Nutzer zusätzlich die Suche nach der benötigten Klasse, da der Nutzer per Mausklick die benötigte Seite im \ac{HTML} aufrufen kann. Die Java API Dokumentation selber wurde mithilfe von Javadoc erstellt. Listing 2 zeigt eine Methode mitsamt deren Javadoc aus der java.lang.String Klasse gezeigt:
 
 \begin{lstlisting}[language=Java,caption=Beispiel eines Javadoc Kommentars]
 
@@ -138,9 +138,9 @@ Für das Erstellen von Dokumentationen gibt es viele Möglichkeiten. Die Program
 
 Auch andere Bibliotheken, die in Java geschrieben worden sind, haben so ihre Dokumentation erstellt. Zu nennen wäre hier z. B. die Bibliothek \ac{LWJGL} \footnote{https://javadoc.lwjgl.org/} oder die Spielebibliothek LibGDX \footnote{https://libgdx.badlogicgames.com/nightlies/docs/api/}. Das Javadoc nimmt beim Erstellen des Quellcodes viel Arbeit für eine externe Dokumentation ab. 
 
-Ein ähnliches Tool für das Erstellen für die Dokumentation ist Doxygen \cite{dimitri2017}. Doxygen steht dabei nicht nur für Java zur Verfügung, sondern auch für andere Programmiersprachen wie C, C++ oder Python. Wie in Javadoc wird auch hier die Dokumentation über Kommentare im Quelltext gesteuert, allerdings hat der Entwickler in Doxygen die Möglichkeit die Dokumentation in verschiedenen arten anzugeben \footnote{https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html}. Es ist zudem möglich, mit Doxygen einen zusammenfassenden Überblick über den Aufbau des Projektes zu erzeugen. Doxygen als Erweiterung wird von vielen Entwicklungsumgebungen \ref{IDE} unterstützt. Des Weiteren unterstützt Doxygen eine einfache Syntaxhervorhebung für die Übersicht. 
+Ein ähnliches Tool für das Erstellen einer Dokumentation ist Doxygen \cite{dimitri2017}. Doxygen steht dabei nicht nur für Java zur Verfügung, sondern auch für andere Programmiersprachen wie C, C++ oder Python. Wie in Javadoc wird auch hier die Dokumentation über Kommentare im Quelltext gesteuert, allerdings hat der Entwickler in Doxygen die Möglichkeit die Dokumentation in verschiedenen Arten anzugeben \footnote{https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html}. Es ist zudem möglich, mit Doxygen einen zusammenfassenden Überblick über den Aufbau des Projektes zu erzeugen. Doxygen als Erweiterung wird von vielen Entwicklungsumgebungen [Abschnitt \ref{IDE}} unterstützt. Des Weiteren unterstützt Doxygen eine einfache Syntaxhervorhebung für die Übersicht. 
 
-Ein Vorteil einer Dokumentation, welches im Quelltext beschrieben wird, ist, dass eine externe Dokumentation fehleranfälliger ist. Eine externe Dokumentation müsste immer separat angepasst werden, falls Änderungen getätigt werden. Zudem ist die Pflege im Quelltext einfacher. 
+Der Vorteil einer Dokumentation, welche im Quelltext beschrieben wird, ist die geringere Fehleranfälligkeit im Vergleich zu extern erstellten Dokumentationen. Eine externe Dokumentation müsste immer separat angepasst werden, falls Änderungen getätigt werden. Zudem ist die Pflege im Quelltext einfacher. 
 
 
 \subsection{Keine eindeutigen Bezeichnungen von Schnittstellen}
@@ -176,9 +176,9 @@ cal.set(2017, Calendar.AUGUST, 22);
 
 \end{lstlisting}
 
-Es wird keine Zahl der Methode als Monat übergeben, sondern eine Konstante. Auch wenn die Methode set dokumentiert ist, so liegt die Benennung ihrer Parameter nahe, dass der Nutzer beim nutzen dieser Methode einfach Zahlen übergeben kann, sodass der Nutzer die Dokumentation nicht zu lesen braucht. Tatsächlich soll laut Bloch \cite{bloch2006} eine Methode so funktionieren, dass es einfach ist diese Methode zu nutzen, aber es schwierig ist, diese Methode falsch zu nutzen. Idealerweise wird im Vorfeld verhindert, dass die Methode falsch genutzt werden kann. Zudem soll die Methode einer API nicht zwangsweise dokumentiert sein, wenn der Bezeichner der Methode und ihre Parameter die Funktionsweise nahelegen. 
+Es wird keine Zahl der Methode als Monat übergeben, sondern eine Konstante. Auch wenn die Methode set dokumentiert ist, so legt die Benennung ihrer Parameter nahe, dass der Nutzer beim Nutzen dieser Methode einfach Zahlen übergeben kann, sodass der Nutzer die Dokumentation nicht zu lesen braucht. Tatsächlich soll laut Bloch \cite{bloch2006} eine Methode so definiert sein, dass es einfach ist diese Methode zu nutzen, aber es schwierig ist, diese Methode falsch zu nutzen. Idealerweise wird im Vorfeld verhindert, dass die Methode falsch genutzt werden kann. Zudem soll die Methode einer API nicht zwangsweise dokumentiert sein, wenn der Bezeichner der Methode und ihre Parameter die Funktionsweise nahelegen. 
 
-Ein anderes Beispiel für eine Methode, die Missverstanden werden kann \cite[ab Minute 7]{bloch2009}, ist folgende Methode:
+Ein anderes Beispiel für eine Methode, die missverstanden werden kann \cite[ab Minute 7]{bloch2009}, ist folgende Methode:
 
 \begin{lstlisting}[language=Java,caption=getBoolean Methode aus java.lang.Boolean]
 
@@ -208,7 +208,7 @@ public static boolean getValue(){
 
 \end{lstlisting}
 
-Allerdings wird hier false geliefert. In der Dokumentation dieser Methode ist zu entnehmen, dass die Methode getBoolean nur dann true liefert, falls es ein System Property gibt, welches den Name trägt, der übergeben wird, und den Wert true oder TRUE zugewiesen bekommen hat:
+Allerdings wird hier false geliefert. In der Dokumentation dieser Methode ist zu entnehmen, dass die Methode getBoolean nur dann true liefert, falls es ein System Property gibt, welches den Namen trägt, der übergeben wird, und den Wert true oder TRUE zugewiesen bekommen hat:
 
 \begin{lstlisting}[language=Java,caption=Beispiel mit getValue mit vorher gesetztem Propertie]
 
@@ -246,9 +246,9 @@ public static boolean getValue(String str) {
 Diese Vorgehensweise ist irreführend, da von dem Bezeichner der Methode nicht hervorgeht, dass vorher die System Property gesetzt werden muss.
 
 
-\subsection{Factory Pattern bedacht einsetzen}
+\subsection{Factory Pattern mit Bedacht einsetzen}
 
-Das Factory Pattern ist ein Entwurfsmuster, welches von der Gang of Four im Buch Design Pattern beschrieben wird \cite{gamme1995}. Es wird dazu genutzt, dass der Nutzer, um eine Klasse zu instanziieren, es nicht über den Konstruktor tätigt, sondern über eine Methode. Der Entwickler soll so nicht mit dem Konstruktor in Berührung kommen. Es hat insbesondere den Vorteil, dass es so möglich ist, den Typ eines Objektes zur Laufzeit zu bestimmen.
+Das Factory Pattern ist ein Entwurfsmuster, welches von der Gang of Four im Buch Design Pattern  \cite{gamme1995} beschrieben wird. Das Pattern wird dazu genutzt, dass der Nutzer, um eine Klasse zu instanziieren, es nicht über den Konstruktor tätigt, sondern über eine Methode. Der Entwickler soll so nicht mit dem Konstruktor in Berührung kommen. Es hat insbesondere den Vorteil, dass es so möglich ist, den Typ eines Objektes zur Laufzeit zu bestimmen.
 Folgender Codeausschnitt soll eine beispielhafte Implementierung in Java zeigen:
 
 \begin{lstlisting}[language=Java,caption=Beispiel eines Factory Patterns in Java]
@@ -274,7 +274,7 @@ public class ConcreteBase2 extends Base { }
 
 \end{lstlisting}
 
-In dem obigen Code Beispiel werden über die Klasse Factory, die Objekte für die Klasse ConcreteBase1 und ConcreteBase2 erzeugt. So kann der Entwickler, der diese Klassen benötigt, Objekte der Klasse nicht nur über den Konstruktor der Klasse erzeugen, sondern auch vorgefertigte Instanzen über die statische Methode factoryMethod in der Klasse Factory. So muss sich der Entwickler keine Gedanken machen, welche Parameter der Konstruktor benötigt, falls dieser welche hat.
+In dem obigen Code.Beispiel werden über die Klasse Factory, die Objekte für die Klasse ConcreteBase1 und ConcreteBase2 erzeugt. So kann der Entwickler Objekte der Klasse nicht nur über den Konstruktor der Klasse erzeugen, sondern auch vorgefertigte Instanzen über die statische Methode factoryMethod in der Klasse Factory. So muss sich der Entwickler keine Gedanken machen, welche Parameter der Konstruktor benötigt, falls dieser welche hat.
 
 Auch wenn das Factory Pattern dem Entwickler es scheinbar einfacher macht an Objekte von einem bestimmten Typ zu kommen, sollte das Factory Pattern nur bedacht eingesetzt werden. 
 In einer empirischen Studie von Ellis \cite{ellis2007} wurde der Unterschied zwischen einer API die Konstruktoren nutzt und einer API die das Factory Pattern nutzt untersucht. Diese Studie kam zum Schluss, dass das Factory Pattern wohl weniger geeignet ist im Gegensatz zu anderen Patterns, wie das Class Cluster Pattern. 
@@ -284,12 +284,12 @@ In einer empirischen Studie von Ellis \cite{ellis2007} wurde der Unterschied zwi
 
 Eine API bietet viele Möglichkeiten für eine stetige Verbesserung. Eine API, die öffentlich genutzt wird, hat meist viele Schritte zur Verbesserung durchgemacht. Die Schritte zur Verbesserung einer API kann sich dabei auch über Jahre strecken. Jedoch muss das Resultat nicht zwingend in jedem Fall positiv sein \cite[siehe Seite 25]{spichale2017}.
 
-Folgend werden einige Vorgehensweisen beschrieben, die aufzeigen sollen, wie dafür gesorgt werden kann, dass eine API auch eine konsequente Verbesserung widerfährt.
+Im Folgenden werden einige Vorgehensweisen beschrieben, die aufzeigen sollen, wie dafür gesorgt werden kann, dass eine API auch einer konsequente Verbesserung widerfährt.
 
 
-\subsection{Nutzer freundlicheres Design}
+\subsection{Nutzerfreundlicheres Design}
 
-Viele Entwickler, die mit keine Benutzerfreundlichen APIs arbeiten, können große Probleme haben diese API zu erlernen. Nach Robillards Untersuchung haben die Entwickler folgendes angegeben \cite{robillard2009}:
+Viele Entwickler, die mit wenig benutzerfreundlichen APIs arbeiten, können große Probleme haben diese API zu erlernen. Nach Robillards Untersuchung haben die Entwickler folgendes angegeben \cite{robillard2009}:
 \begin{itemize}
 \item 78 Prozent gaben an, eine API durch ihre Dokumentation zu lernen.
 \\
@@ -302,31 +302,29 @@ Viele Entwickler, die mit keine Benutzerfreundlichen APIs arbeiten, können gro�
 \item 29 Prozent gaben an, dass sie sich Artikel zu den API durchlesen
 \end{itemize}
 
-Anhand der Ergebnisse sieht man ziemlich gut, wie wichtig eine Dokumentation für die Nutzer einer API ist. Mehr als drei Viertel gaben an, dass sie sich erst in die Dokumentation einlesen, bevor sie mit der API programmieren. Daher kann es essenziell sein, mit der API auch eine gute Dokumentation zu haben. Mehr als ein drittel geben an, eine API zu lernen indem sie mit dessen Schnittstellen herumexperimentieren. Daraus ist zu entnehmen, dass ein verständliches Design der Schnittstellen für viele Entwickler das Mittel ist, um diese API zu lernen. 
-
-Zudem gaben die Testpersonen an, dass es für sie auch wichtig sei, dass die Dokumentation einige gute Beispiele beinhalten soll. So z. B. komplexere Szenarien, die mit Code Beispielen untermauert werden. Auch eine strukturierte Ordnung sei wichtig. 
+Anhand der Ergebnisse sieht man ziemlich gut, wie wichtig eine Dokumentation für die Nutzer einer API ist. Mehr als drei Viertel gaben an, dass sie sich erst in die Dokumentation einlesen, bevor sie mit der API programmieren. Daher kann es essenziell sein, mit der API auch eine gute Dokumentation zu haben. Mehr als ein Drittel geben an, eine API zu lernen indem sie mit dessen Schnittstellen herumexperimentieren. Daraus ist zu entnehmen, dass ein verständliches Design der Schnittstellen für viele Entwickler das Mittel ist, um diese API zu lernen. Zudem gaben die Testpersonen an, dass es für sie auch wichtig sei, dass die Dokumentation einige gute Beispiele beinhalten soll. So z. B. komplexere Szenarien, die mit Code Beispielen untermauert werden. Auch eine strukturierte Ordnung sei wichtig. 
 
 \subsection{APIs Testen}
 
-Um die Qualität einer API zu verbessern, ist es sinnvoll die API vorher zu testen. Neben den Unit-Tests \footnote{https://martinfowler.com/bliki/UnitTest.html}, gibt es auch Testmöglichkeiten, bei denen es von einem Entwickler getestet wird. Der Zweck von diesen Tests ist es, die Benutzerfreundlichkeit der Tests zu erhöhen. 
+Um die Qualität einer API zu verbessern, ist es sinnvoll die API vorher zu testen. Neben den Unit-Tests \footnote{https://martinfowler.com/bliki/UnitTest.html}, gibt es auch Testmöglichkeiten, bei denen es von einem Entwickler getestet wird. Der Zweck von diesen Tests ist es, die Benutzerfreundlichkeit der APIs zu erhöhen. 
 
-Es bieten sich für menschliche Tests einige Möglichkeiten an. Eines davon ist das Peer-Reivew um die Benutzerfreundlichkeit zu bewerten \cite{farooq2010}. Das Ziel einer API Peer Review ist es, Rückmeldung zu erhalten, wie stark die Benutzerfreundlichkeit der API ist.  
+Es bieten sich für menschliche Tests einige Möglichkeiten an. Eine davon ist das Peer-Reivew \cite{farooq2010}. Das Ziel einer API Peer-Review ist es, Rückmeldung zu erhalten, wie stark die Benutzerfreundlichkeit der API ist.  
 
 
 \section{Ausgewählte \ac{API} Entwurfsmuster}
 
-Bloch beschreibt die Eigenschaft einer gute API folgendermaßen:
+Bloch beschreibt die Eigenschaft einer guten API folgendermaßen:
 \\\\
 Good APIs create long-term customers; bad ones create long-term support nightmares\cite{bloch2006}.
 \\\\
-Eine API, die nutzerfreundlich ist, erspart einem Entwickler, der diese API nutzt, sehr viel Stress und vor allem Zeit. Auch ist das Design entscheidend für den Erfolg einer API. Viele Entwurfsmuster haben sich dabei durchgesetzt, mit dessen Hilfe eine API da hingehend verbessert werden kann, indem es dem Entwickler, welcher mit der API arbeiten muss, das Leben erleichtert.
+Eine API, die nutzerfreundlich ist, erspart einem Entwickler, der diese API nutzt, sehr viel Stress und vor allem Zeit. Auch ist das Design entscheidend für den Erfolg einer API. Viele Entwurfsmuster haben sich dabei durchgesetzt, mit dessen Hilfe eine API dahingehend verbessert werden kann, dass es dem Entwickler, welcher mit der API arbeiten muss, das Leben erleichtert.
 
-Folgend werden einige Entwurfsbeispiele für eine API aufgezählt.
+Im Folgenden werden einige Entwurfsbeispiele für eine API aufgezählt.
 
 
 \subsection{Sinnvolle Klassennamen wählen}
 
-In objektorientierte Programmiersprachen, wie Java oder C++, sind die Namen der Klassen ebenso relevant, wie die Methodennamen. Ein wesentlicher Grund dafür ist, dass hierbei die Objekte Schnittstellen nach außen anbieten, auf die dann der Nutzer dieser API Zugriff hat. Zudem sind viele Objekte, sei es durch Vererbung oder durch eine Parameterübergabe an eine Methode, miteinander Verbunden. 
+In objektorientierte Programmiersprachen, wie Java oder C++, sind die Namen der Klassen ebenso relevant, wie die Methodennamen. Ein wesentlicher Grund dafür ist, dass hierbei die Objekte Schnittstellen nach außen anbieten, auf die dann der Nutzer dieser API Zugriff hat. Zudem sind viele Objekte, sei es durch Vererbung oder durch eine Parameterübergabe an eine Methode, miteinander verbunden. 
 Der Name einer Klasse sollte ein Substantiv sein \cite{martin2009}. Er sollte zudem mit einem großen Buchstaben anfangen. Einige Beispiele für gute Klassennamen wären:
 
 \begin{lstlisting}[language=Java,caption= Klassennamen]
